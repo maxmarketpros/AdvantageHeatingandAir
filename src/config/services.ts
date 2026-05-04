@@ -42,6 +42,12 @@ export const services: ServiceConfig[] = [
         icon: "CreditCard",
       },
     ],
+    benefitSection: {
+      eyebrow: "Why Advantage for AC Installation",
+      heading: "What Sets Our AC Installation & Replacement Apart",
+      subtitle:
+        "The standards we hold every Oklahoma City AC install to — from the load calc to the final commissioning report.",
+    },
     features: [
       "Free in-home estimate with written quote",
       "Manual J-style load calculation",
@@ -54,7 +60,26 @@ export const services: ServiceConfig[] = [
       "Full system commissioning & airflow check",
       "Workmanship warranty + manufacturer warranty registration",
     ],
-    detailImages: ["service-ac-install-feature", "img-condenser-closeup"],
+    scopeSection: {
+      eyebrow: "What's in the Quote",
+      heading: "What's Included with Every AC Installation",
+      subtitle:
+        "No surprises, no add-ons at the truck — every Oklahoma City AC replacement ships with all of this in writing up front.",
+    },
+    detailFeatures: [
+      {
+        title: "Precision-Sized AC Installation in Oklahoma City",
+        description:
+          "Most undersized and oversized AC failures trace back to a guess at the salesman's clipboard. Our Oklahoma City AC installation always starts with a Manual J-style load calc on your actual home — square footage, insulation, window load, duct condition — so the system we put in actually matches the cooling job in front of it.",
+        imageKey: "service-ac-install-feature",
+      },
+      {
+        title: "AC Replacements Tuned for OKC Summers",
+        description:
+          "An AC replacement is only as good as the commissioning behind it. Before we leave, we verify refrigerant charge, static pressure, supply temperatures, and superheat/subcool — the steps that separate a system that limps through July from one that holds 72° on a 105° afternoon in Oklahoma City.",
+        imageKey: "img-condenser-closeup",
+      },
+    ],
     faqKeys: [
       "faq-ac-install-1",
       "faq-ac-install-2",
@@ -185,6 +210,12 @@ export const services: ServiceConfig[] = [
         icon: "Settings",
       },
     ],
+    benefitSection: {
+      eyebrow: "Why Homeowners Call Us First",
+      heading: "What Makes Our AC Repair Different in Oklahoma City",
+      subtitle:
+        "Honest diagnoses, written quotes, and a tech who answers the phone — the things that actually matter when your AC quits in the OKC metro.",
+    },
     features: [
       "24/7 emergency dispatch",
       "Same-day appointments across the OKC metro",
@@ -197,7 +228,26 @@ export const services: ServiceConfig[] = [
       "Drain line clearing & condensate pump replacement",
       "Full system performance test before we leave",
     ],
-    detailImages: ["service-ac-repair-feature", "img-condenser-closeup"],
+    scopeSection: {
+      eyebrow: "On Every Repair Visit",
+      heading: "What's Covered on Every AC Repair Call",
+      subtitle:
+        "Every air conditioning repair we run in Oklahoma City includes the diagnostic and verification steps below — no shortcuts to make a number.",
+    },
+    detailFeatures: [
+      {
+        title: "Same-Day AC Repair Across Oklahoma City",
+        description:
+          "When the AC drops on a 100° afternoon, time-to-cool is the only metric that matters. Our trucks roll stocked with the parts that fail most often on Oklahoma City systems — capacitors, contactors, motors, refrigerant — so the majority of our AC repair calls are diagnosed and finished on the first visit.",
+        imageKey: "service-ac-repair-feature",
+      },
+      {
+        title: "Air Conditioning Repair Without Commission Pressure",
+        description:
+          "Our techs aren't paid on commission, so the diagnosis you get is the actual fault — not the most profitable repair. You get a written air conditioning repair quote up front, you decide whether to proceed, and we don't touch a wrench until you say go.",
+        imageKey: "img-condenser-closeup",
+      },
+    ],
     faqKeys: [
       "faq-ac-repair-1",
       "faq-ac-repair-2",
@@ -328,6 +378,12 @@ export const services: ServiceConfig[] = [
         icon: "Leaf",
       },
     ],
+    benefitSection: {
+      eyebrow: "Why Advantage for Heating",
+      heading: "What You Get with Our Heating System Installation",
+      subtitle:
+        "Equipment selection, sizing, and commissioning standards we follow on every Oklahoma City heating installation — not just the big-ticket jobs.",
+    },
     features: [
       "Free in-home estimate & system recommendation",
       "Heat-load calculation for proper sizing",
@@ -340,7 +396,26 @@ export const services: ServiceConfig[] = [
       "System commissioning & airflow balance",
       "Workmanship + manufacturer warranty registration",
     ],
-    detailImages: ["service-heating-feature", "img-condenser-closeup"],
+    scopeSection: {
+      eyebrow: "Inside the Install",
+      heading: "What's in Every Heating System Installation",
+      subtitle:
+        "Every heating installation we deliver in the Oklahoma City metro includes the line items below — written into your quote before we start.",
+    },
+    detailFeatures: [
+      {
+        title: "Heating System Installation Sized for Oklahoma City Winters",
+        description:
+          "Oklahoma's design temperature isn't the average winter day — it's the single-digit morning after an ice storm. We size every heating system installation against that real-world load, so your furnace or heat pump isn't gasping the one week you actually need it most.",
+        imageKey: "service-heating-feature",
+      },
+      {
+        title: "Combustion-Safe, Code-First Heating Installation",
+        description:
+          "Heating installation isn't just about heat — it's about gas, vent, and combustion air done right. Every Oklahoma City install we put in includes a sealed combustion check, a calibrated draft test, and a CO sweep on every gas appliance in the home before we hand back the keys.",
+        imageKey: "img-condenser-closeup",
+      },
+    ],
     faqKeys: [
       "faq-heating-1",
       "faq-heating-2",
@@ -471,6 +546,12 @@ export const services: ServiceConfig[] = [
         icon: "Settings",
       },
     ],
+    benefitSection: {
+      eyebrow: "Why OKC Calls Us First",
+      heading: "What Sets Our Furnace Repair & Replacement Apart",
+      subtitle:
+        "How we handle every no-heat call across the Oklahoma City metro — from the diagnostic-first walkthrough to the combustion test on the way out.",
+    },
     features: [
       "24/7 emergency dispatch",
       "Same-day diagnosis & repair when possible",
@@ -483,7 +564,26 @@ export const services: ServiceConfig[] = [
       "Floor furnace service & replacement",
       "Combustion safety check before we leave",
     ],
-    detailImages: ["service-furnace-feature", "img-condenser-closeup"],
+    scopeSection: {
+      eyebrow: "On Every Service Call",
+      heading: "Inside Every Furnace Repair Visit",
+      subtitle:
+        "What every Oklahoma City furnace repair includes by default — the diagnostic, parts, and safety checks we never skip.",
+    },
+    detailFeatures: [
+      {
+        title: "Same-Day Furnace Repair in Oklahoma City",
+        description:
+          "Cold-snap no-heat calls always go to the front of the queue. Our Oklahoma City furnace repair vans are stocked with the parts that fail most — flame sensors, igniters, capacitors, control boards, thermocouples — so the majority of repair calls are wrapped up in a single visit, not a parts-order delay.",
+        imageKey: "service-furnace-feature",
+      },
+      {
+        title: "Furnace Replacement Quotes Without the Pressure",
+        description:
+          "When a furnace is genuinely past its useful life, we'll say so — and when a $200 part will buy you another five years, we'll say that too. You get a written furnace replacement quote with side-by-side options and zero commission-driven pressure to upsize beyond what your home actually needs.",
+        imageKey: "img-condenser-closeup",
+      },
+    ],
     faqKeys: [
       "faq-heating-2",
       "faq-heating-3",
@@ -614,6 +714,12 @@ export const services: ServiceConfig[] = [
         icon: "ClipboardCheck",
       },
     ],
+    benefitSection: {
+      eyebrow: "Why Customers Call Us",
+      heading: "What Makes Our Water Heater Service Different",
+      subtitle:
+        "From a same-day water heater repair to a full tankless conversion, here's how we run every job across the Oklahoma City metro.",
+    },
     features: [
       "Free in-home replacement estimate",
       "Tank water heater replacement (gas or electric)",
@@ -626,7 +732,26 @@ export const services: ServiceConfig[] = [
       "Drip pan, expansion tank & shut-off install",
       "Old unit haul-away and disposal",
     ],
-    detailImages: ["img-water-heater-knob", "img-condenser-closeup"],
+    scopeSection: {
+      eyebrow: "On Every Job",
+      heading: "What's Included with Every Water Heater Installation & Repair",
+      subtitle:
+        "Whether we're patching a thermocouple or dropping in a new tankless system, every Oklahoma City water heater job ships with these line items.",
+    },
+    detailFeatures: [
+      {
+        title: "Same-Day Water Heater Repair in Oklahoma City",
+        description:
+          "A cold shower at 6 AM doesn't wait for a parts order. Our Oklahoma City water heater repair trucks carry thermocouples, gas valves, igniters, heating elements, and anode rods — so most no-hot-water calls are diagnosed and repaired the same day, not a week from Tuesday.",
+        imageKey: "img-water-heater-knob",
+      },
+      {
+        title: "Water Heater Installation: Tank, Tankless, or Hybrid",
+        description:
+          "Replacing the same 50-gallon tank isn't always the right answer in OKC's hard-water territory. We walk you through tank, tankless, and hybrid heat-pump water heater installation options with real recovery rates and lifecycle costs — so the unit you pay for actually fits your household.",
+        imageKey: "img-condenser-closeup",
+      },
+    ],
     faqKeys: [
       "faq-water-1",
       "faq-water-2",
@@ -757,6 +882,12 @@ export const services: ServiceConfig[] = [
         icon: "Map",
       },
     ],
+    benefitSection: {
+      eyebrow: "Why Property Managers Pick Us",
+      heading: "What You Get with Our Commercial HVAC Service",
+      subtitle:
+        "How we run commercial HVAC across the Oklahoma City metro — from a one-tenant retail unit to a multi-building portfolio.",
+    },
     features: [
       "Rooftop unit (RTU) install, repair, and replacement",
       "Split system & mini-split service",
@@ -769,7 +900,26 @@ export const services: ServiceConfig[] = [
       "After-hours emergency dispatch",
       "Property-management-friendly invoicing",
     ],
-    detailImages: ["service-commercial-feature", "img-air-duct-vent"],
+    scopeSection: {
+      eyebrow: "Service Agreement Scope",
+      heading: "What's in Every Commercial HVAC Agreement",
+      subtitle:
+        "The scope of work we standardize on every Oklahoma City commercial HVAC contract — predictable, billable, and budget-friendly.",
+    },
+    detailFeatures: [
+      {
+        title: "Commercial HVAC Designed Around Uptime",
+        description:
+          "Empty showrooms, walk-in coolers warming up, and 78° conference rooms aren't acceptable outcomes. Our commercial HVAC service in Oklahoma City is built around minimizing downtime — stocked trucks, after-hours dispatch, and rooftop-certified techs who can pull a contactor or chase a refrigerant leak the same hour you call.",
+        imageKey: "service-commercial-feature",
+      },
+      {
+        title: "Planned Commercial HVAC Maintenance That Pays Back",
+        description:
+          "Most commercial HVAC failures are scheduled — they just aren't on your schedule. Our planned maintenance program in the OKC metro catches dirty coils, slipping belts, weak capacitors, and undercharged refrigerant before they pull a unit offline at the worst possible moment for your tenants.",
+        imageKey: "img-air-duct-vent",
+      },
+    ],
     faqKeys: [
       "faq-commercial-1",
       "faq-commercial-2",
@@ -900,6 +1050,12 @@ export const services: ServiceConfig[] = [
         icon: "Layers",
       },
     ],
+    benefitSection: {
+      eyebrow: "Why OKC Calls Us",
+      heading: "What Sets Our Air Duct & Ventilation Work Apart",
+      subtitle:
+        "How we approach ductwork, ventilation, and indoor air quality for homes across the Oklahoma City metro — measure first, fix once.",
+    },
     features: [
       "Ductwork design, repair, and replacement",
       "Ductless mini-split install (single & multi-zone)",
@@ -912,7 +1068,26 @@ export const services: ServiceConfig[] = [
       "Bath & kitchen exhaust ventilation",
       "Make-up air and pressure balancing",
     ],
-    detailImages: ["service-vent-feature", "service-vent-mini-split"],
+    scopeSection: {
+      eyebrow: "On Every Airflow Job",
+      heading: "What's in Every Air Duct & Ventilation Project",
+      subtitle:
+        "The duct, ventilation, and IAQ line items we standardize on every Oklahoma City home — diagnosed, sealed, and verified.",
+    },
+    detailFeatures: [
+      {
+        title: "Air Duct Sealing & Ventilation Built for Oklahoma City",
+        description:
+          "Most Oklahoma City homes lose 20–30% of their conditioned air through leaky, undersized, or disconnected ducts. We measure airflow and static pressure on every air duct project so the sealing, resizing, or replacement we recommend actually solves the hot-room or high-bill problem you called us about.",
+        imageKey: "service-vent-feature",
+      },
+      {
+        title: "Ductless Mini-Splits & Whole-Home IAQ Upgrades",
+        description:
+          "Garages, sunrooms, additions, and ductless homes don't have to settle for portable units. We install single- and multi-zone ductless mini-splits across the OKC metro, plus the IAQ upgrades — media filters, UV lights, dehumidifiers — that make Oklahoma's pollen and humidity actually manageable.",
+        imageKey: "service-vent-mini-split",
+      },
+    ],
     faqKeys: [
       "faq-vent-1",
       "faq-vent-2",
@@ -993,9 +1168,9 @@ export const services: ServiceConfig[] = [
           icon: "Sun",
         },
         {
-          title: "Built to Last",
+          title: "Sealed & Supported to Last",
           description:
-            "Properly insulated, properly sealed, properly supported — work that won't sag or leak in five years.",
+            "Properly insulated, properly sealed, properly supported — duct and ventilation work that won't sag or leak in five years.",
           icon: "ShieldCheck",
         },
       ],

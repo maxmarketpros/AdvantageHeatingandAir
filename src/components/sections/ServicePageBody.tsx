@@ -29,13 +29,10 @@ export function ServicePageBody({ service }: ServicePageBodyProps) {
     },
   };
 
-  const featureListItems = service.detailImages.map((imgKey, i) => ({
-    title: i === 0 ? "Done Right the First Time" : "Built to Last",
-    description:
-      i === 0
-        ? "Every service call gets the same care: clean tools, written quotes, and an honest diagnosis. No commission, no upselling — just solid HVAC work you can rely on."
-        : "We use premium parts, take time to commission systems properly, and back our work with a written warranty. Comfort that holds up year after year.",
-    imageKey: imgKey,
+  const featureListItems = service.detailFeatures.map((f) => ({
+    title: f.title,
+    description: f.description,
+    imageKey: f.imageKey,
   }));
 
   return (
@@ -104,9 +101,9 @@ export function ServicePageBody({ service }: ServicePageBodyProps) {
 
       <BenefitGrid
         benefits={service.benefits}
-        eyebrow="Why Advantage"
-        heading="What You Get with Every Service Call"
-        subtitle="The standards we hold ourselves to on every job — big or small."
+        eyebrow={service.benefitSection.eyebrow}
+        heading={service.benefitSection.heading}
+        subtitle={service.benefitSection.subtitle}
         bgColor="surface"
         primaryCta={ctaProps.primary}
         secondaryCta={ctaProps.secondary}
@@ -124,6 +121,9 @@ export function ServicePageBody({ service }: ServicePageBodyProps) {
 
       <ServiceScopeSection
         items={service.features}
+        eyebrow={service.scopeSection.eyebrow}
+        heading={service.scopeSection.heading}
+        subtitle={service.scopeSection.subtitle}
         primaryCta={ctaProps.primary}
         secondaryCta={ctaProps.secondary}
       />

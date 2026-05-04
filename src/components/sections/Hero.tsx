@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { ArrowRight, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -24,7 +25,10 @@ export function Hero() {
       {/* Content */}
       <Container className="relative z-10 py-32 text-center">
         <span className="mb-4 inline-block rounded-full bg-accent-500 px-5 py-2 text-xs font-semibold uppercase tracking-widest text-white shadow-lg">
-          24/7 Emergency Service · Family-Owned · 25+ Years
+          <span className="sm:hidden">24/7 Emergency Service</span>
+          <span className="hidden sm:inline">
+            24/7 Emergency Service · Family-Owned · 25+ Years
+          </span>
         </span>
 
         <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
@@ -55,14 +59,14 @@ export function Hero() {
         </div>
 
         {/* Stats Row */}
-        <div className="mx-auto mt-16 flex max-w-lg items-center justify-center gap-8 md:gap-12">
+        <div className="mx-auto mt-16 flex max-w-lg items-center justify-center gap-4 sm:gap-8 md:gap-12">
           {heroStats.map((stat, i) => (
-            <div key={i} className="flex items-center gap-8">
+            <Fragment key={i}>
               <StatItem value={stat.value} label={stat.label} light />
               {i < heroStats.length - 1 && (
-                <div className="h-10 w-px bg-white/20" />
+                <div className="hidden h-10 w-px bg-white/20 sm:block" />
               )}
-            </div>
+            </Fragment>
           ))}
         </div>
       </Container>

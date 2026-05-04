@@ -3,6 +3,7 @@ import { MapPin, ChevronRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { MapEmbed } from "@/components/ui/MapEmbed";
+import { SnowflakeBackground } from "@/components/ui/SnowflakeBackground";
 import { businessConfig } from "@/config/business";
 import { cn } from "@/lib/utils";
 
@@ -14,8 +15,11 @@ export function ServiceAreasSection({ className }: ServiceAreasSectionProps) {
   const cities = businessConfig.serviceAreaCities;
 
   return (
-    <section className={cn("section-padding bg-primary-700", className)}>
-      <Container>
+    <section
+      className={cn("relative overflow-hidden section-padding bg-primary-700", className)}
+    >
+      <SnowflakeBackground variant="light" large />
+      <Container className="relative">
         {/* Header */}
         <div className="mb-12 text-center">
           <SectionHeading

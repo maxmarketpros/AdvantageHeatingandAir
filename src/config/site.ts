@@ -11,4 +11,6 @@ export const siteConfig = {
     google:
       "https://www.google.com/maps/place/Advantage+Heating+and+Air+Conditioning/@35.4435368,-97.5972417,16z/data=!4m6!3m5!1s0x87b211a0955872a3:0xc11dc8289d4283a7!8m2!3d35.4435368!4d-97.5946668!16s%2Fg%2F11rc9lz6wn",
   },
+  // Short link to the Google Business Profile — customers click here to read or leave a review.
+  googleReviewUrl: "https://maps.app.goo.gl/EfZUZ5kTnUaanqWJA",
 } as const;

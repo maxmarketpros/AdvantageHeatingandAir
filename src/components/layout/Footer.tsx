@@ -28,24 +28,41 @@ export function Footer() {
         <div className="grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-5">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <div className="flex items-start gap-4">
-              <Image
-                src="/penguin.png"
-                alt="Advantage Heating & Air mascot"
-                width={80}
-                height={80}
-                className="h-16 w-16 shrink-0 rounded-lg bg-white/5 p-1"
-              />
+            <div className="flex flex-col items-start gap-5 sm:flex-row sm:items-center">
+              <div className="group relative shrink-0">
+                {/* Soft brand glow behind the mascot */}
+                <div
+                  aria-hidden
+                  className="absolute -inset-3 rounded-full bg-primary-500/30 blur-2xl transition-all duration-500 group-hover:bg-primary-500/50"
+                />
+                {/* Subtle ring */}
+                <div className="relative flex items-center justify-center rounded-2xl bg-white p-4 shadow-lg ring-1 ring-white/20 transition-transform duration-500 group-hover:scale-105">
+                  <Image
+                    src="/penguin.png"
+                    alt="Advantage Heating & Air mascot"
+                    width={320}
+                    height={320}
+                    className="h-32 w-32 object-contain sm:h-40 sm:w-40"
+                  />
+                </div>
+              </div>
               <div>
-                <h2 className="text-lg font-bold leading-tight">
+                <h2 className="text-xl font-bold leading-tight md:text-2xl">
                   {siteConfig.name}
                 </h2>
-                <p className="mt-1 text-xs uppercase tracking-wider text-primary-200">
+                <p className="mt-1.5 text-xs uppercase tracking-[0.2em] text-primary-200">
                   {siteConfig.tagline}
                 </p>
+                <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-accent-500/15 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent-200 ring-1 ring-accent-500/30">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-400 opacity-75" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-500" />
+                  </span>
+                  Open 24/7
+                </div>
               </div>
             </div>
-            <p className="mt-5 text-sm leading-relaxed text-white/60">
+            <p className="mt-6 text-sm leading-relaxed text-white/60">
               {siteConfig.description}
             </p>
 

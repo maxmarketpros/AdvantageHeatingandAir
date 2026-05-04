@@ -95,6 +95,44 @@
     @apply py-12 md:py-16;
   }
 
+  /* ===== Snow animation ===== */
+  @keyframes snow-fall {
+    0% {
+      transform: translate3d(0, -10vh, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate3d(20px, 110vh, 0) rotate(360deg);
+    }
+  }
+
+  @keyframes snow-drift {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(18px);
+    }
+  }
+
+  @keyframes icicle-shimmer {
+    0%, 100% {
+      opacity: 0.18;
+    }
+    50% {
+      opacity: 0.45;
+    }
+  }
+
+  .animate-snow-fall {
+    animation: snow-fall linear infinite;
+    will-change: transform;
+  }
+
+  .animate-snow-drift {
+    animation: snow-drift ease-in-out infinite;
+    will-change: transform;
+  }
+
   /* Long-form prose styling for blog posts */
   .prose-blog {
     @apply text-foreground-light;

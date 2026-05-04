@@ -141,10 +141,10 @@ export function Header() {
               <Image
                 src="/logo.png"
                 alt="Advantage Heating & Air Conditioning"
-                width={300}
-                height={100}
+                width={420}
+                height={140}
                 priority
-                className="h-12 w-auto md:h-14"
+                className="h-[67px] w-auto md:h-[78px]"
               />
             </Link>
 

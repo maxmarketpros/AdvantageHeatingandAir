@@ -21,8 +21,22 @@ export interface ServiceConfig {
   heroImage: string;
   description: string[];
   benefits: BenefitItem[];
+  benefitSection: {
+    eyebrow: string;
+    heading: string;
+    subtitle: string;
+  };
   features: string[];
-  detailImages: string[];
+  scopeSection: {
+    eyebrow: string;
+    heading: string;
+    subtitle: string;
+  };
+  detailFeatures: {
+    title: string;
+    description: string;
+    imageKey: string;
+  }[];
   faqKeys: string[];
   ctaHeading: string;
   ctaText: string;
@@ -90,8 +104,15 @@ export interface AreaConfig {
   cityFull: string; // e.g. "Edmond, OK"
   title: string; // page H1 — e.g. "Air Conditioning Contractor in Edmond, OK"
   excerpt: string; // ~1 sentence intro under hero
+  heroImageKey: string; // unique hero image per area
+  featureImageKey: string; // unique feature image per area
   intro: string[]; // 2–3 paragraphs of unique local copy
   localHook: string; // 1 sentence local-flavor reference (neighborhoods, landmarks, weather)
+  localSection: {
+    eyebrow: string;
+    heading: string;
+    body: string[]; // 1–2 paragraphs about a city-specific HVAC concern
+  };
   topServices: string[]; // 4–6 service slugs/labels relevant to this area
   faqKeys: string[];
 }

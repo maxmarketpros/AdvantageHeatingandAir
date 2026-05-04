@@ -29,6 +29,12 @@ const sizes = {
   lg: "px-8 py-4 text-lg",
 };
 
+// Anything that isn't an internal path or anchor we treat as an external URL
+// and render with a plain <a target="_blank">.
+function isExternal(href: string): boolean {
+  return /^(https?:|mailto:|tel:)/i.test(href);
+}
+
 export function Button({
   children,
   href,
@@ -47,6 +53,29 @@ export function Button({
   );
 
   if (href) {
+    if (isExternal(href) && !href.startsWith("mailto:") && !href.startsWith("tel:")) {
+      return (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes}
+        >
+          {children}
+          {icon}
+        </a>
+      );
+    }
+
+    if (href.startsWith("mailto:") || href.startsWith("tel:")) {
+      return (
+        <a href={href} className={classes}>
+          {children}
+          {icon}
+        </a>
+      );
+    }
+
     return (
       <Link href={href} className={classes}>
         {children}

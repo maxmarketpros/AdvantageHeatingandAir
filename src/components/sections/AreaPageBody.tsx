@@ -49,7 +49,7 @@ export function AreaPageBody({ area }: AreaPageBodyProps) {
       <PageHero
         heading={area.title}
         subtitle={area.excerpt}
-        imageKey="area-hero"
+        imageKey={area.heroImageKey}
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Service Areas", href: "/#service-areas" },
@@ -94,7 +94,7 @@ export function AreaPageBody({ area }: AreaPageBodyProps) {
             </div>
             <div className="relative">
               <ImageSlot
-                imageKey="area-feature"
+                imageKey={area.featureImageKey}
                 aspectRatio="4/3"
                 className="rounded-2xl"
               />
@@ -105,6 +105,28 @@ export function AreaPageBody({ area }: AreaPageBodyProps) {
                 </p>
               </div>
             </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Why this city — unique local angle */}
+      <section className="section-padding bg-foreground">
+        <Container>
+          <div className="mx-auto max-w-3xl text-center">
+            <SectionHeading
+              eyebrow={area.localSection.eyebrow}
+              heading={area.localSection.heading}
+              align="center"
+              light
+            />
+            {area.localSection.body.map((p, i) => (
+              <p
+                key={i}
+                className="mb-4 text-base leading-relaxed text-white/80 md:text-lg"
+              >
+                {p}
+              </p>
+            ))}
           </div>
         </Container>
       </section>

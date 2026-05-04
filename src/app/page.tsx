@@ -5,6 +5,8 @@ import { Hero } from "@/components/sections/Hero";
 import { InfoBar } from "@/components/layout/InfoBar";
 import { SplitSection } from "@/components/sections/SplitSection";
 import { ServiceGrid } from "@/components/sections/ServiceGrid";
+import { PartnerBanner } from "@/components/sections/PartnerBanner";
+import { SnowflakeBackground } from "@/components/ui/SnowflakeBackground";
 import { ProcessGrid } from "@/components/sections/ProcessGrid";
 import { TestimonialSection } from "@/components/sections/TestimonialSection";
 import { FAQSection } from "@/components/sections/FAQSection";
@@ -48,7 +50,9 @@ export default function HomePage() {
       <InfoBar />
 
       {/* About Preview */}
-      <SplitSection
+      <div className="relative pt-6 md:pt-8">
+        <SnowflakeBackground />
+        <SplitSection
         imageKey={content.aboutPreview.image}
         imagePosition="right"
         badge={content.aboutPreview.badge}
@@ -80,6 +84,10 @@ export default function HomePage() {
           </Button>
         </div>
       </SplitSection>
+      </div>
+
+      {/* Partner Banner */}
+      <PartnerBanner />
 
       {/* Services */}
       <div id="services">
