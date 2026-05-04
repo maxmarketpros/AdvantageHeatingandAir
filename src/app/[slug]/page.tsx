@@ -61,6 +61,8 @@ export async function generateMetadata({
     title: r.post.title,
     description: r.post.excerpt,
     path: `/${r.post.slug}`,
+    ogType: "article",
+    publishedTime: r.post.date,
   });
 }
 

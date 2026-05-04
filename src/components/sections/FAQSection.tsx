@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { faqs, getFaqsByKeys } from "@/config/faqs";
+import { generateFAQSchema } from "@/lib/structured-data";
 import { cn } from "@/lib/utils";
 import type { FAQItem } from "@/types";
 
@@ -39,6 +40,14 @@ export function FAQSection({
         className
       )}
     >
+      {displayFaqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(displayFaqs)),
+          }}
+        />
+      )}
       <Container>
         <div className="mx-auto max-w-3xl">
           <SectionHeading

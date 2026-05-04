@@ -1,6 +1,6 @@
 import { siteConfig } from "@/config/site";
 import { businessConfig } from "@/config/business";
-import type { ServiceConfig } from "@/types";
+import type { ServiceConfig, FAQItem } from "@/types";
 
 const DAY_ORDER = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"] as const;
 const DAY_FULL: Record<string, string> = {
@@ -30,12 +30,18 @@ function expandDayRange(spec: string): string[] {
 export function generateLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "HVACBusiness"],
+    "@type": "HVACBusiness",
+    "@id": `${siteConfig.url}/#business`,
     name: siteConfig.name,
+    alternateName: siteConfig.shortName,
     description: siteConfig.description,
     url: siteConfig.url,
     telephone: businessConfig.phone,
     email: businessConfig.email,
+    image: `${siteConfig.url}${siteConfig.ogImage}`,
+    logo: `${siteConfig.url}/logo.png`,
+    priceRange: "$$",
+    foundingDate: `${businessConfig.yearEstablished}`,
     address: {
       "@type": "PostalAddress",
       streetAddress: businessConfig.address.street,
@@ -69,10 +75,13 @@ export function generateServiceSchema(service: ServiceConfig) {
     "@type": "Service",
     name: service.title,
     description: service.excerpt,
+    serviceType: service.title,
     provider: {
-      "@type": "LocalBusiness",
+      "@type": "HVACBusiness",
+      "@id": `${siteConfig.url}/#business`,
       name: siteConfig.name,
       url: siteConfig.url,
+      telephone: businessConfig.phone,
     },
     areaServed: businessConfig.serviceAreas.map((area) => ({
       "@type": "City",
@@ -102,13 +111,19 @@ export function generateBlogPostSchema(post: {
   title: string;
   excerpt: string;
   date: string;
+  heroImage?: string;
 }) {
+  const url = `${siteConfig.url}/${post.slug}`;
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
+    dateModified: post.date,
+    image: post.heroImage
+      ? `${siteConfig.url}${post.heroImage}`
+      : `${siteConfig.url}${siteConfig.ogImage}`,
     author: {
       "@type": "Organization",
       name: siteConfig.name,
@@ -123,6 +138,25 @@ export function generateBlogPostSchema(post: {
         url: `${siteConfig.url}/logo.png`,
       },
     },
-    mainEntityOfPage: `${siteConfig.url}/${post.slug}`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+    url,
+  };
+}
+
+export function generateFAQSchema(items: FAQItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
   };
 }

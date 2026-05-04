@@ -1,7 +1,14 @@
-import Link from "next/link";
+import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Page Not Found",
+  description:
+    "The page you're looking for can't be found. Browse our HVAC services or get in touch for help.",
+  robots: { index: false, follow: false },
+};
 
 export default function NotFound() {
   return (
