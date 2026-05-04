@@ -1,72 +1,89 @@
 export const businessConfig = {
-  phone: "(555) 123-4567",
-  phoneRaw: "+15551234567",
-  email: "info@premierservices.com",
+  phone: "(405) 549-1652",
+  phoneRaw: "+14055491652",
+  email: "davidmesquita2102@gmail.com",
   address: {
-    street: "1234 Main Street",
-    city: "Springfield",
-    state: "IL",
-    zip: "62701",
-    full: "1234 Main Street, Springfield, IL 62701",
+    street: "4317 SW 22nd St #705",
+    city: "Oklahoma City",
+    state: "OK",
+    zip: "73108",
+    full: "4317 SW 22nd St #705, Oklahoma City, OK 73108",
   },
   hours: {
-    display: "Mon-Sat: 8 AM - 6 PM",
+    display: "Open 24/7 — 365 Days a Year",
     structured: [
-      { days: "Mo-Sa", opens: "08:00", closes: "18:00" },
+      { days: "Mo-Su", opens: "00:00", closes: "23:59" },
     ],
   },
 
   // ===== SERVICE AREAS =====
-  // Primary list used in footer, structured data, etc.
+  // Compact list used in footer / structured data.
   serviceAreas: [
-    "Springfield",
-    "Shelbyville",
-    "Capital City",
-    "Ogdenville",
-    "North Haverbrook",
+    "Oklahoma City",
+    "Edmond",
+    "Norman",
+    "Moore",
+    "Yukon",
+    "Mustang",
+    "Midwest City",
+    "Del City",
+    "Bethany",
+    "The Village",
+    "Nichols Hills",
+    "Piedmont",
+    "Newcastle",
+    "Blanchard",
+    "Purcell",
+    "Chickasha",
+    "Shawnee",
+    "El Reno",
+    "Harrah",
+    "McCloud",
   ],
 
   // Expanded city list for the Service Areas section on the homepage.
-  // Each city can optionally link to a dedicated area page in the future.
+  // Hrefs match the slugs preserved from the legacy site.
   serviceAreaCities: [
-    { name: "Springfield", href: "" },
-    { name: "Shelbyville", href: "" },
-    { name: "Capital City", href: "" },
-    { name: "Ogdenville", href: "" },
-    { name: "North Haverbrook", href: "" },
-    { name: "Cypress Creek", href: "" },
-    { name: "Brockway", href: "" },
-    { name: "East Springfield", href: "" },
-    { name: "West Springfield", href: "" },
-    { name: "Shelbyville Heights", href: "" },
-    { name: "Springfield Junction", href: "" },
-    { name: "Waverly", href: "" },
+    { name: "Edmond", href: "/air-conditioning-contractor-in-edmond-oklahoma-city-ok" },
+    { name: "Norman", href: "/air-conditioning-contractor-in-norman-ok" },
+    { name: "Moore", href: "/air-conditioning-contractor-in-moore-ok" },
+    { name: "Yukon", href: "/air-conditioning-contractor-in-yukon-oklahoma-city-ok" },
+    { name: "Mustang", href: "/air-conditioning-contractor-in-mustang-oklahoma-city-ok" },
+    { name: "Midwest City", href: "/air-conditioning-contractor-in-midwest-city-ok" },
+    { name: "Del City", href: "/air-conditioning-contractor-in-del-city-ok" },
+    { name: "Bethany", href: "/air-conditioning-contractor-in-bethany-ok" },
+    { name: "The Village", href: "/air-conditioning-contractor-in-the-village-oklahoma-city-ok" },
+    { name: "Nichols Hills", href: "/air-conditioning-contractor-in-nickels-hills-oklahoma-city-ok" },
+    { name: "Piedmont", href: "/air-conditioning-contractor-in-piedmont-oklahoma-city-ok" },
+    { name: "Newcastle", href: "/air-conditioning-contractor-in-newcastle-oklahoma-city-ok" },
+    { name: "Blanchard", href: "/air-conditioning-contractor-in-blanchard-ok" },
+    { name: "Purcell", href: "/air-conditioning-contractor-in-purcell-ok" },
+    { name: "Chickasha", href: "/air-conditioning-contractor-in-chickasha-ok" },
+    { name: "Shawnee", href: "/air-conditioning-contractor-in-shawnee-ok" },
+    { name: "El Reno", href: "/air-conditioning-contractor-in-el-rino-oklahoma-city-ok" },
+    { name: "Harrah", href: "/air-conditioning-contractor-in-harrah-ok" },
+    { name: "McCloud", href: "/air-conditioning-contractor-in-mccloud-ok" },
   ],
 
   // Service areas section content
-  serviceAreasHeading: "Serving Springfield & Central Illinois",
+  serviceAreasHeading: "Serving Oklahoma City & the Surrounding Metro",
   serviceAreasSubtitle:
-    "and surrounding areas including Shelbyville, Capital City, and the greater metro region.",
+    "From Edmond and Norman to Yukon, Moore, and beyond — we cover the OKC metro 24/7.",
 
   // ===== MAP EMBED =====
-  // If you have a Google Business Profile, paste the full embed src URL here.
-  // To get it: Google Maps → search your business → Share → Embed a map → copy the src="" value
-  // If left empty, falls back to a generic map centered on the business address city.
   googleBusinessMapEmbed:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.355408359939!2d-117.85053459999999!3d33.6738603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dce7a447c59297%3A0x47ae50923ef7bc34!2sMax%20Market%20Pros!5e0!3m2!1sen!2sus!4v1775504357479!5m2!1sen!2sus",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6500.909330716919!2d-97.59724172276641!3d35.443536772664864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b211a0955872a3%3A0xc11dc8289d4283a7!2sAdvantage%20Heating%20and%20Air%20Conditioning!5e0!3m2!1sen!2sus!4v1777911874845!5m2!1sen!2sus",
 
   // ===== FORM EMBED =====
-  // Paste your iframe embed URL here (e.g. from Jobber, HouseCall Pro, GoHighLevel, Jotform, etc.)
-  // This is used on the contact page and the "Get a Quote" section across all pages.
-  // Leave empty to show a styled placeholder.
+  // We use a native Netlify-compatible form (see ContactForm.tsx) instead of an iframe embed.
   formEmbedUrl: "",
   formEmbedHeight: "600px",
 
-  coordinates: { lat: 39.7817, lng: -89.6501 },
-  yearEstablished: 2009,
-  yearsExperience: "15+",
-  projectsCompleted: "250+",
-  ownerName: "John Smith",
+  coordinates: { lat: 35.4435368, lng: -97.5946668 },
+  yearEstablished: 2000,
+  yearsExperience: "25+",
+  projectsCompleted: "5,000+",
+  ownerName: "",
 } as const;
 
 // Helper: returns the map embed URL — Google Business embed if set, otherwise a generic city map
@@ -74,7 +91,6 @@ export function getMapEmbedUrl(): string {
   if (businessConfig.googleBusinessMapEmbed) {
     return businessConfig.googleBusinessMapEmbed;
   }
-  // Fallback: generic Google Maps embed centered on the business city
   const { city, state } = businessConfig.address;
   return `https://www.google.com/maps/embed/v1/place?key=&q=${encodeURIComponent(`${city}, ${state}`)}`;
 }

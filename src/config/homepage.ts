@@ -1,85 +1,84 @@
 export const homepageContent = {
   hero: {
-    heading: "Trusted Professional Services in Springfield, IL",
+    heading: "Your Trusted HVAC Experts in Oklahoma City",
     subtitle:
-      "Premium quality work, transparent pricing, and full project accountability across Springfield and the surrounding region.",
-    primaryCta: { label: "Get a Quote", href: "/contact" },
-    secondaryCta: { label: "Call (555) 123-4567", href: "tel:+15551234567" },
+      "Family-owned, NATE-certified, and on call 24/7 across the OKC metro. Same-day service, honest pricing, and a best-price guarantee on every job.",
+    primaryCta: { label: "Get a Free Estimate", href: "/contact" },
+    secondaryCta: { label: "Call (405) 549-1652", href: "tel:+14055491652" },
   },
   aboutPreview: {
-    eyebrow: "About Us",
-    heading:
-      "Your Trusted Service Partner in Springfield and the Surrounding Region",
+    eyebrow: "About Advantage",
+    heading: "Oklahoma City's Family-Owned HVAC Pros for 25+ Years",
     paragraph:
-      "We are a premium service company based in Springfield, Illinois. For more than 15 years, we have helped property owners across the region turn their vision into reality with meticulous craftsmanship and transparent communication.",
+      "We've spent more than two decades keeping Oklahoma homes and businesses comfortable through brutal summers and ice storms alike. From a single-room repair to a full-system replacement, you get the same crew, the same straightforward pricing, and the same get-it-done-right approach every time.",
     bullets: [
       {
-        title: "Transparent Line-Item Pricing",
+        title: "Same-Day Service",
         description:
-          "No hidden fees. You see exactly where your money goes before we start.",
+          "Most calls answered and dispatched the same day — often within a few hours.",
       },
       {
-        title: "Owner-Led Accountability",
+        title: "NATE-Certified Technicians",
         description:
-          "We lead every project in person. Direct communication at every phase.",
+          "Every tech on our crew carries the gold-standard NATE certification for HVAC work.",
       },
       {
-        title: "Regional Expertise",
+        title: "Best-Price Guarantee",
         description:
-          "Built for the local climate, codes, and conditions of our service area.",
+          "Find a lower price on a comparable install? We'll match or beat it. No fine print.",
       },
     ],
     image: "about-preview",
-    badge: { value: "15+", label: "Years of Experience" },
+    badge: { value: "25+", label: "Years Serving OKC" },
   },
   services: {
-    eyebrow: "Our Services",
-    heading: "What We Do",
+    eyebrow: "What We Do",
+    heading: "Full-Service Heating, Cooling & Hot Water",
     subtitle:
-      "Comprehensive solutions tailored to your needs, delivered with precision and care.",
+      "AC, heating, water heaters, ductwork, and commercial HVAC — all from one local team you can trust.",
   },
   standards: {
-    eyebrow: "Our Approach",
-    heading: "The Standard We Hold",
+    eyebrow: "Why Advantage",
+    heading: "What Sets Us Apart in the OKC Metro",
     paragraphs: [
-      "Every project is held to a relentless standard of execution covering initial planning through final completion. This isn't just a marketing promise — it forms the daily operational backbone of every project we manage.",
-      "The quality of professional work is determined long before the finishing touches. It lives in the precision of the schedule, the coordination of complex tasks, and the rigorous oversight that only an owner-led team can guarantee.",
+      "We aren't a corporate franchise running a call center 1,500 miles away. We live here, our kids go to school here, and our reputation is built one driveway at a time across Oklahoma City and the surrounding towns.",
+      "That's why we answer the phone 24/7, why we don't pay our techs commission, and why every quote comes in writing before any wrench is turned.",
     ],
     checklist: [
-      "Documented scope of work before every phase",
-      "Daily coordination with all team members",
-      "Quality-first sequencing and critical hold points",
-      "Clean, organized work sites maintained daily",
-      "Safety protocols enforced rigorously",
-      "Inspection readiness at every checkpoint",
-      "Transparent budget tracking and updates",
-      "Owner-present milestone walkthroughs",
+      "24/7 emergency service — 365 days a year",
+      "Same-day appointments across the OKC metro",
+      "NATE-certified, drug-tested, background-checked techs",
+      "Up-front written estimates — no hidden fees",
+      "BBB-accredited and ACCA member in good standing",
+      "Certified Amana Heating & Cooling installer",
+      "Financing available on qualifying new installs",
+      "Workmanship warranty on every install",
     ],
     image: "standards-feature",
-    badge: { value: "250+", label: "Projects Delivered" },
+    badge: { value: "24/7", label: "Always On Call" },
   },
   process: {
-    eyebrow: "Our Process",
-    heading: "How We Work",
+    eyebrow: "How It Works",
+    heading: "Simple, Honest, Done Right",
     subtitle:
-      "A proven process refined over 15 years to deliver exceptional results, every time.",
+      "From the first call to the final walkthrough, here's how we deliver comfort fast.",
   },
   testimonials: {
-    eyebrow: "Client Reviews",
-    heading: "What Our Clients Say",
+    eyebrow: "Real Reviews",
+    heading: "What Our OKC Neighbors Say",
     subtitle:
-      "Don't just take our word for it. Here's what our clients have to say about working with us.",
+      "Five-star reviews from real Oklahoma homeowners — see what your neighbors think.",
   },
   faq: {
     eyebrow: "FAQ",
-    heading: "Frequently Asked Questions",
+    heading: "Common Questions, Straight Answers",
     subtitle:
-      "Answers to common questions about our services, process, and what to expect.",
+      "Quick answers to the questions we hear most. Don't see yours? Give us a call.",
   },
   cta: {
-    heading: "Ready to Start Your Project?",
-    text: "Schedule a free consultation today and discover why hundreds of clients trust us with their most important projects.",
-    primaryCta: { label: "Get a Quote", href: "/contact" },
-    secondaryCta: { label: "Call (555) 123-4567", href: "tel:+15551234567" },
+    heading: "Comfort Trouble? We'll Be There.",
+    text: "Whether it's a routine tune-up, an emergency repair, or a full system replacement — Advantage is one call away, 24 hours a day.",
+    primaryCta: { label: "Get a Free Estimate", href: "/contact" },
+    secondaryCta: { label: "Call (405) 549-1652", href: "tel:+14055491652" },
   },
 } as const;

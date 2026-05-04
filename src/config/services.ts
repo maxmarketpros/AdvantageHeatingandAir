@@ -1,413 +1,1002 @@
 import type { ServiceConfig } from "@/types";
 
 export const services: ServiceConfig[] = [
+  // ============================================================
+  // 1. AC INSTALLATION & REPLACEMENT
+  // ============================================================
   {
-    slug: "service-one",
-    title: "Service One",
+    slug: "ac-installation-replacement-oklahoma-city-ok",
+    title: "AC Installation & Replacement",
     excerpt:
-      "Full-service delivery from initial consultation through final completion. We lead every phase with clear accountability and direct communication.",
-    icon: "Hammer",
-    cardImage: "service-1",
-    heroImage: "service-1-hero",
+      "Expert AC installation and replacement across the Oklahoma City metro. We size your system right, install it clean, and back it with a workmanship warranty.",
+    icon: "Snowflake",
+    cardImage: "service-ac-install",
+    heroImage: "service-ac-install-hero",
     description: [
-      "Our flagship service combines deep expertise with meticulous attention to detail. From the initial assessment through final delivery, every step is managed with precision and care.",
-      "We bring over 15 years of hands-on experience to every project, ensuring that the work meets the highest standards of quality and durability. Our team handles everything so you can focus on what matters most.",
+      "An air conditioner that's properly sized, properly installed, and properly tuned can save you 20–40% on cooling costs over a poorly installed one — even if the equipment is identical. That's why we don't cut corners. Every install starts with a load calculation, includes a clean drain line and proper electrical, and ends with a refrigerant charge dialed in to spec.",
+      "Whether you need a brand-new unit, a same-size replacement, or you're upgrading to a high-efficiency variable-speed system, we walk you through the options and give you a clear written quote — no commission-driven upsells.",
     ],
     benefits: [
       {
-        title: "Expert Execution",
+        title: "Right-Sized for Oklahoma Heat",
         description:
-          "Every project is led by seasoned professionals with proven track records in the field.",
-        icon: "Shield",
+          "We perform a Manual J-style load calculation so your unit cools the whole house, not just the room with the thermostat.",
+        icon: "Thermometer",
       },
       {
-        title: "Transparent Pricing",
+        title: "Premium Brand Selection",
         description:
-          "Detailed line-item estimates before work begins. No hidden fees, no surprises.",
-        icon: "Receipt",
+          "Certified Amana installers, plus we install Carrier, Trane, Lennox, Goodman, and more — your choice.",
+        icon: "Award",
       },
       {
-        title: "Quality Materials",
+        title: "Clean, Code-Compliant Install",
         description:
-          "We source only premium materials from trusted suppliers, built to last in any condition.",
-        icon: "Package",
+          "Proper line set, condensate drain, electrical disconnect, and pad — done to code and inspected before we leave.",
+        icon: "ClipboardCheck",
       },
       {
-        title: "On-Time Delivery",
+        title: "Financing Available",
         description:
-          "Rigorous scheduling and daily coordination ensure your project stays on track.",
-        icon: "Clock",
+          "Qualifying replacements can be financed with affordable monthly payments. Ask about it during your free estimate.",
+        icon: "CreditCard",
       },
     ],
     features: [
-      "Comprehensive initial assessment",
-      "Detailed project planning",
-      "Premium material sourcing",
-      "Professional installation",
-      "Quality inspection at every phase",
-      "Final walkthrough and sign-off",
-      "Post-project warranty support",
-      "Dedicated project manager",
+      "Free in-home estimate with written quote",
+      "Manual J-style load calculation",
+      "Old equipment removal and proper disposal",
+      "New refrigerant line set & insulation as needed",
+      "Concrete or composite condenser pad",
+      "Updated electrical disconnect to code",
+      "Programmable or smart thermostat install",
+      "Refrigerant charge tuned to manufacturer spec",
+      "Full system commissioning & airflow check",
+      "Workmanship warranty + manufacturer warranty registration",
     ],
-    detailImages: ["service-1-detail-1", "service-1-detail-2"],
+    detailImages: ["service-ac-install-feature", "img-condenser-closeup"],
     faqKeys: [
-      "faq-general-1",
-      "faq-general-2",
-      "faq-general-3",
-      "faq-s1-1",
-      "faq-s1-2",
-      "faq-s1-3",
+      "faq-ac-install-1",
+      "faq-ac-install-2",
+      "faq-ac-install-3",
+      "faq-general-5",
+      "faq-general-6",
+      "faq-general-8",
     ],
-    ctaHeading: "Ready to Get Started?",
+    ctaHeading: "Ready for a New AC?",
     ctaText:
-      "Schedule a free consultation and let us show you what quality service looks like.",
+      "Get a free in-home estimate from a NATE-certified Advantage technician — no pressure, just honest options.",
     topicSectionA: {
-      eyebrow: "Our Expertise",
-      heading: "Professional Service One Solutions in Springfield, IL",
+      eyebrow: "Our AC Install Expertise",
+      heading: "Professional AC Installation in Oklahoma City, OK",
       subtitle:
-        "Comprehensive expertise across every aspect of Service One, backed by years of local experience.",
+        "Decades of experience cooling Oklahoma homes — done right the first time.",
       items: [
         {
-          title: "Residential Projects",
+          title: "New Construction",
           description:
-            "Tailored solutions for homeowners seeking quality craftsmanship and lasting results in their residential properties.",
+            "Full HVAC system design and install for new builds, additions, and major remodels across the OKC metro.",
           icon: "Home",
         },
         {
-          title: "Commercial Applications",
+          title: "Same-Size Replacement",
           description:
-            "Scalable service delivery for commercial properties, offices, and retail spaces with minimal disruption to operations.",
-          icon: "Building",
+            "When your old unit needs to go but your home's needs haven't changed, we get the new one in fast.",
+          icon: "RefreshCw",
         },
         {
-          title: "Emergency Response",
+          title: "High-Efficiency Upgrades",
           description:
-            "Rapid response capability for urgent needs. Our team is equipped to handle time-sensitive situations efficiently.",
-          icon: "AlertCircle",
-        },
-        {
-          title: "Preventive Maintenance",
-          description:
-            "Scheduled maintenance programs designed to prevent costly issues and extend the life of your investment.",
-          icon: "CalendarCheck",
-        },
-        {
-          title: "Code Compliance",
-          description:
-            "Full compliance with local building codes and regulations. We handle permits and inspections seamlessly.",
-          icon: "ClipboardCheck",
-        },
-        {
-          title: "Energy Efficiency",
-          description:
-            "Modern solutions that improve performance while reducing long-term operating costs and environmental impact.",
+            "Step up to a 16+ SEER variable-speed system and watch your summer power bill shrink.",
           icon: "Leaf",
+        },
+        {
+          title: "Heat Pump Conversions",
+          description:
+            "All-electric heat-pump systems pair with backup heat for efficient, year-round comfort.",
+          icon: "Zap",
+        },
+        {
+          title: "Ductless Mini-Splits",
+          description:
+            "Perfect for additions, garages, and homes without ductwork — single- and multi-zone systems.",
+          icon: "AirVent",
+        },
+        {
+          title: "Smart Thermostat Setup",
+          description:
+            "Nest, Ecobee, Honeywell — we wire it, configure it, and show you how to use it before we leave.",
+          icon: "Smartphone",
         },
       ],
     },
     topicSectionB: {
-      eyebrow: "Why Springfield Trusts Us",
-      heading: "Service One Built for Springfield's Needs",
+      eyebrow: "Why OKC Trusts Advantage",
+      heading: "AC Installations Built for the Oklahoma Climate",
       subtitle:
-        "Local knowledge and regional expertise that generic providers simply cannot match.",
+        "100°+ summers, ice storms, and red-dirt humidity — we install systems that can handle all of it.",
       items: [
         {
-          title: "Local Climate Expertise",
+          title: "Oklahoma Summer-Tested",
           description:
-            "We understand the unique challenges of the local climate and design solutions that perform year-round.",
-          icon: "Thermometer",
+            "We size for the worst week of July — not for an ideal-day spec sheet — so your house stays cool when it counts.",
+          icon: "Sun",
         },
         {
-          title: "Regional Code Knowledge",
+          title: "Best-Price Guarantee",
           description:
-            "Deep familiarity with Springfield area building codes, permitting processes, and inspection requirements.",
+            "Find a lower written quote on a comparable install? We'll match or beat it. No fine print.",
+          icon: "BadgeDollarSign",
+        },
+        {
+          title: "Local Permits Handled",
+          description:
+            "We pull the right permits and meet inspection so your install is documented and warranty-protected.",
           icon: "FileCheck",
         },
         {
-          title: "Trusted Local Suppliers",
+          title: "Real Local Reviews",
           description:
-            "Established relationships with regional suppliers ensure premium materials at competitive pricing.",
-          icon: "Truck",
-        },
-        {
-          title: "Community Reputation",
-          description:
-            "Built on word-of-mouth referrals from satisfied Springfield homeowners and business owners.",
+            "Five-star Google reviews from your actual OKC neighbors — not paid endorsements.",
           icon: "Star",
         },
       ],
     },
   },
+
+  // ============================================================
+  // 2. AIR CONDITIONING REPAIR
+  // ============================================================
   {
-    slug: "service-two",
-    title: "Service Two",
+    slug: "air-conditioning-repair-services-oklahoma-city",
+    title: "Air Conditioning Repair Services",
     excerpt:
-      "Premium solutions with meticulous attention to detail and the level of oversight that complex projects require. Built to your exact specifications.",
+      "Same-day AC repair across Oklahoma City and the metro. Honest diagnoses, written quotes, and 24/7 emergency dispatch when the heat won't wait.",
     icon: "Wrench",
-    cardImage: "service-2",
-    heroImage: "service-2-hero",
+    cardImage: "service-ac-repair",
+    heroImage: "service-ac-repair-hero",
     description: [
-      "When your project demands precision and expertise, our second service offering delivers. We combine advanced techniques with time-tested methods to produce exceptional results.",
-      "Our approach starts with a thorough understanding of your needs. We develop a customized plan that addresses every detail, from material selection to timeline management, ensuring a seamless experience from start to finish.",
+      "When the AC quits in the middle of an Oklahoma summer, every hour matters. Advantage answers calls 24/7 and dispatches NATE-certified techs who actually know what they're doing — not commission-chasers looking to upsell you on a system you don't need.",
+      "We diagnose the problem, give you a written quote, and let you decide. Most repairs are wrapped up the same day with parts already on the truck.",
     ],
     benefits: [
       {
-        title: "Custom Solutions",
+        title: "24/7 Emergency Dispatch",
         description:
-          "Every project is tailored to your specific needs, goals, and budget.",
+          "We answer calls around the clock and prioritize emergencies — no matter the day or hour.",
+        icon: "Clock",
+      },
+      {
+        title: "Honest Diagnosis",
+        description:
+          "Our techs aren't on commission. The diagnosis you get is the real problem — not the most profitable one.",
+        icon: "ShieldCheck",
+      },
+      {
+        title: "Up-Front Pricing",
+        description:
+          "Every repair is quoted in writing before any work starts. You decide whether to proceed.",
+        icon: "Receipt",
+      },
+      {
+        title: "All Brands Serviced",
+        description:
+          "Carrier, Trane, Lennox, Goodman, York, Rheem, Bryant, Amana — and just about every other system on the market.",
         icon: "Settings",
-      },
-      {
-        title: "Advanced Techniques",
-        description:
-          "We use the latest methods and technology to deliver superior results.",
-        icon: "Zap",
-      },
-      {
-        title: "Full Coordination",
-        description:
-          "Seamless management of all teams, materials, and timelines under one roof.",
-        icon: "Users",
-      },
-      {
-        title: "Lasting Results",
-        description:
-          "Built with durability in mind, our work stands the test of time.",
-        icon: "Award",
       },
     ],
     features: [
-      "In-depth project consultation",
-      "Custom design and planning",
-      "Specialist team assignment",
-      "Precision execution",
-      "Regular progress updates",
-      "Multi-point quality checks",
-      "Comprehensive documentation",
-      "Extended warranty coverage",
+      "24/7 emergency dispatch",
+      "Same-day appointments across the OKC metro",
+      "Refrigerant leak detection & repair",
+      "Capacitor & contactor replacement",
+      "Compressor diagnostics & replacement",
+      "Frozen evaporator coil thaw & repair",
+      "Blower motor & fan repair",
+      "Thermostat replacement & calibration",
+      "Drain line clearing & condensate pump replacement",
+      "Full system performance test before we leave",
     ],
-    detailImages: ["service-2-detail-1", "service-2-detail-2"],
+    detailImages: ["service-ac-repair-feature", "img-condenser-closeup"],
     faqKeys: [
+      "faq-ac-repair-1",
+      "faq-ac-repair-2",
+      "faq-ac-repair-3",
       "faq-general-1",
-      "faq-general-4",
-      "faq-general-5",
-      "faq-s2-1",
-      "faq-s2-2",
-      "faq-s2-3",
+      "faq-general-3",
+      "faq-general-6",
     ],
-    ctaHeading: "Let's Discuss Your Project",
+    ctaHeading: "AC Down? We'll Be There Fast.",
     ctaText:
-      "Every great project starts with a conversation. Reach out today for a free estimate.",
+      "Call now for same-day service across Oklahoma City and the metro. 24/7 emergency dispatch.",
     topicSectionA: {
-      eyebrow: "Specialized Solutions",
-      heading: "Advanced Service Two Capabilities in Springfield, IL",
+      eyebrow: "Common AC Repairs",
+      heading: "AC Repair Services in Oklahoma City, OK",
       subtitle:
-        "Specialized techniques and premium methods that deliver results beyond the ordinary.",
+        "From simple capacitor swaps to full compressor jobs, we fix it right and stand behind the work.",
       items: [
         {
-          title: "Custom Design",
+          title: "Refrigerant Leaks",
           description:
-            "Bespoke design solutions created specifically for your property, preferences, and functional requirements.",
-          icon: "Palette",
+            "Electronic leak detection, line repair, and a recharge to spec. We fix the cause — not just the symptom.",
+          icon: "Droplets",
         },
         {
-          title: "Material Selection",
+          title: "Capacitor & Contactor",
           description:
-            "Expert guidance on premium material options that balance aesthetics, durability, and budget.",
-          icon: "Layers",
+            "The most common reason an AC won't start. Most are replaceable on the first visit.",
+          icon: "Zap",
         },
         {
-          title: "Technical Precision",
+          title: "Compressor Issues",
           description:
-            "Advanced measurement and installation techniques that ensure flawless execution on every detail.",
-          icon: "Ruler",
+            "Diagnosing failed compressors honestly — sometimes a repair, sometimes a replacement is the smarter call.",
+          icon: "Cog",
         },
         {
-          title: "Quality Assurance",
+          title: "Frozen Coils",
           description:
-            "Multi-point inspection protocols at every phase to guarantee work meets our exacting standards.",
-          icon: "BadgeCheck",
+            "Frozen indoor coils are usually a symptom of low refrigerant or restricted airflow. We find the root cause.",
+          icon: "Snowflake",
         },
         {
-          title: "Timeline Management",
+          title: "Drainage Problems",
           description:
-            "Detailed scheduling with milestone tracking to keep your project on pace from start to finish.",
-          icon: "Timer",
+            "Clogged condensate lines cause water damage and shut-offs. Quick to clear, easy to prevent.",
+          icon: "Waves",
         },
         {
-          title: "Post-Project Support",
+          title: "Electrical & Controls",
           description:
-            "Extended warranty coverage and responsive after-service support for complete peace of mind.",
-          icon: "LifeBuoy",
+            "Bad thermostats, broken control boards, or wiring gremlins — we diagnose and fix electrical issues safely.",
+          icon: "CircuitBoard",
         },
       ],
     },
     topicSectionB: {
-      eyebrow: "Local Advantage",
-      heading: "Trusted Service Two Provider in Springfield, IL",
+      eyebrow: "Why OKC Calls Advantage",
+      heading: "Trusted AC Repair Across Oklahoma City",
       subtitle:
-        "Regional expertise and deep community roots that set us apart from national competitors.",
+        "When your AC fails in 100° heat, you need someone who answers the phone and shows up fast.",
       items: [
         {
-          title: "15+ Years Local Experience",
+          title: "Real 24/7 Coverage",
           description:
-            "Over a decade and a half serving Springfield and surrounding communities with consistent excellence.",
-          icon: "Award",
+            "A real person answers — at 2 AM in July or 6 PM on Christmas Eve. No call-back lottery.",
+          icon: "PhoneCall",
         },
         {
-          title: "Springfield-Area Specialists",
+          title: "Stocked Trucks",
           description:
-            "Intimate knowledge of local property styles, construction methods, and environmental considerations.",
+            "We carry the parts that fail most — capacitors, contactors, motors, refrigerant — so most repairs finish in one visit.",
+          icon: "Truck",
+        },
+        {
+          title: "Workmanship Warranty",
+          description:
+            "If a repair fails because of our work, we come back and make it right at no charge.",
+          icon: "BadgeCheck",
+        },
+        {
+          title: "Local OKC Crew",
+          description:
+            "We live in the metro, our techs live in the metro, and we'll see you again at the grocery store.",
           icon: "MapPin",
         },
+      ],
+    },
+  },
+
+  // ============================================================
+  // 3. HEATING SYSTEM INSTALLATION
+  // ============================================================
+  {
+    slug: "heating-system-installation-services-oklahoma-city",
+    title: "Heating System Installation",
+    excerpt:
+      "Professional heating system installation across the OKC metro — gas furnaces, heat pumps, and dual-fuel systems sized and installed the right way.",
+    icon: "Flame",
+    cardImage: "service-heating",
+    heroImage: "service-heating-hero",
+    description: [
+      "Oklahoma winters can swing from mild to brutal in a week. Whether you're replacing a tired furnace or upgrading to a more efficient heat pump or dual-fuel system, the install matters as much as the equipment. A properly sized and tuned system runs less, lasts longer, and keeps your home comfortable when an ice storm rolls through.",
+      "We help you pick the right heating equipment for your home, install it cleanly, and tune it for performance — then walk you through how to use it before we leave.",
+    ],
+    benefits: [
+      {
+        title: "Right Equipment for Your Home",
+        description:
+          "Gas furnace, heat pump, or dual-fuel — we'll explain the trade-offs and help you choose what fits.",
+        icon: "Lightbulb",
+      },
+      {
+        title: "Sized for Oklahoma Winters",
+        description:
+          "We size for design temperatures so your system handles the coldest week of the year, not just the average.",
+        icon: "Thermometer",
+      },
+      {
+        title: "Code-Compliant Gas & Vent",
+        description:
+          "Proper gas line sizing, sealed combustion, correct vent termination — installed to code.",
+        icon: "ShieldCheck",
+      },
+      {
+        title: "Energy-Efficient Options",
+        description:
+          "High-AFUE furnaces and inverter heat pumps that drop your gas or power bill all winter.",
+        icon: "Leaf",
+      },
+    ],
+    features: [
+      "Free in-home estimate & system recommendation",
+      "Heat-load calculation for proper sizing",
+      "Old furnace removal and disposal",
+      "Gas line inspection & sizing",
+      "Sealed-combustion intake & exhaust install",
+      "Updated thermostat (smart or programmable)",
+      "Condensate handling for high-efficiency units",
+      "Full combustion analysis & safety check",
+      "System commissioning & airflow balance",
+      "Workmanship + manufacturer warranty registration",
+    ],
+    detailImages: ["service-heating-feature", "img-condenser-closeup"],
+    faqKeys: [
+      "faq-heating-1",
+      "faq-heating-2",
+      "faq-general-5",
+      "faq-general-6",
+      "faq-general-8",
+      "faq-general-2",
+    ],
+    ctaHeading: "Time for a New Heating System?",
+    ctaText:
+      "Get a free estimate on a furnace, heat pump, or dual-fuel install — sized for your home, priced fairly.",
+    topicSectionA: {
+      eyebrow: "Heating Systems We Install",
+      heading: "Heating System Installation in Oklahoma City, OK",
+      subtitle:
+        "Every fuel type and every efficiency tier — we help you choose what fits your home and budget.",
+      items: [
         {
-          title: "Vetted Subcontractors",
+          title: "Gas Furnaces",
           description:
-            "A curated network of local trade partners we trust to uphold our quality standards.",
-          icon: "UserCheck",
+            "80% AFUE standard or 95%+ high-efficiency condensing units. The most common Oklahoma heat source.",
+          icon: "Flame",
         },
         {
-          title: "Responsive Local Team",
+          title: "Heat Pumps",
           description:
-            "A team based right here in the area — available for site visits, adjustments, and ongoing support.",
+            "All-electric, high-efficiency, and great for OKC's mild winters. Cools and heats from one unit.",
+          icon: "Zap",
+        },
+        {
+          title: "Dual-Fuel Systems",
+          description:
+            "A heat pump for mild weather plus a gas furnace for the coldest nights — best of both worlds.",
+          icon: "Layers",
+        },
+        {
+          title: "Variable-Speed Equipment",
+          description:
+            "Quieter, more efficient, and steadier room temperatures vs. single-stage on/off systems.",
+          icon: "SlidersHorizontal",
+        },
+        {
+          title: "Electric Furnaces",
+          description:
+            "Reliable backup or primary electric heat for homes without natural gas service.",
+          icon: "Plug",
+        },
+        {
+          title: "Smart Thermostats",
+          description:
+            "Nest, Ecobee, Honeywell — wired correctly and configured for your equipment.",
+          icon: "Smartphone",
+        },
+      ],
+    },
+    topicSectionB: {
+      eyebrow: "Why OKC Trusts Advantage",
+      heading: "Heating Installs Built for Oklahoma's Real Winters",
+      subtitle:
+        "Ice storms, single-digit nights, and shoulder-season swings — we install systems that handle all of it.",
+      items: [
+        {
+          title: "Oklahoma-Climate Sized",
+          description:
+            "We size for the design temperature, not the average. Your system stays ahead of the cold even when the wind kicks up.",
+          icon: "Wind",
+        },
+        {
+          title: "Local Permits & Inspection",
+          description:
+            "Permitted, inspected, and documented — so your manufacturer warranty holds up and the resale value follows you.",
+          icon: "FileCheck",
+        },
+        {
+          title: "Financing Available",
+          description:
+            "Qualifying installs can be financed so a new system doesn't have to be a one-shot expense.",
+          icon: "CreditCard",
+        },
+        {
+          title: "25+ Years Local",
+          description:
+            "We've heated OKC homes through ice storms and polar vortexes alike. We know what works here.",
+          icon: "Award",
+        },
+      ],
+    },
+  },
+
+  // ============================================================
+  // 4. FURNACE REPAIR & REPLACEMENT
+  // ============================================================
+  {
+    slug: "furnace-repair-and-replacement-oklahoma-city",
+    title: "Furnace Repair & Replacement",
+    excerpt:
+      "Fast furnace repair and honest replacement quotes across Oklahoma City. From a stuck flame sensor to a full new furnace — we've got it covered, 24/7.",
+    icon: "Flame",
+    cardImage: "service-furnace",
+    heroImage: "service-furnace-hero",
+    description: [
+      "When your furnace stops working in the middle of an OKC cold snap, you need somebody who'll actually pick up the phone. Our techs answer 24/7, dispatch fast, and most repairs are completed on the first visit. We also handle floor furnaces — yes, even the older ones still common in older Oklahoma City homes.",
+      "If your furnace is past its useful life, we'll give you a fair, no-pressure replacement quote and walk you through what's worth fixing vs. what's worth replacing.",
+    ],
+    benefits: [
+      {
+        title: "24/7 Emergency Repair",
+        description:
+          "No-heat calls get top priority — we won't leave you in the cold.",
+        icon: "Clock",
+      },
+      {
+        title: "Floor Furnace Specialists",
+        description:
+          "Older OKC homes still use floor furnaces. We service and replace them when others won't touch them.",
+        icon: "Home",
+      },
+      {
+        title: "Honest Repair vs. Replace",
+        description:
+          "We tell you straight when a repair is worth it and when a replacement is the smarter long-term call.",
+        icon: "Scale",
+      },
+      {
+        title: "All Brands Serviced",
+        description:
+          "Carrier, Trane, Lennox, Goodman, Rheem, Bryant, York, Amana — every major furnace brand.",
+        icon: "Settings",
+      },
+    ],
+    features: [
+      "24/7 emergency dispatch",
+      "Same-day diagnosis & repair when possible",
+      "Flame sensor cleaning & replacement",
+      "Igniter & thermocouple replacement",
+      "Inducer motor & blower motor service",
+      "Heat exchanger inspection (cracks = safety issue)",
+      "Gas valve & control board diagnostics",
+      "Thermostat troubleshooting & replacement",
+      "Floor furnace service & replacement",
+      "Combustion safety check before we leave",
+    ],
+    detailImages: ["service-furnace-feature", "img-condenser-closeup"],
+    faqKeys: [
+      "faq-heating-2",
+      "faq-heating-3",
+      "faq-general-1",
+      "faq-general-3",
+      "faq-general-6",
+      "faq-general-8",
+    ],
+    ctaHeading: "No Heat? Call Us First.",
+    ctaText:
+      "Same-day furnace repair across Oklahoma City. 24/7 emergency dispatch — we'll get the heat back fast.",
+    topicSectionA: {
+      eyebrow: "Common Furnace Issues",
+      heading: "Furnace Repair Services in Oklahoma City, OK",
+      subtitle:
+        "Most furnace problems come down to a handful of root causes. We diagnose them right the first time.",
+      items: [
+        {
+          title: "Won't Ignite",
+          description:
+            "Bad flame sensor, dirty igniter, gas pressure issue, or a tripped safety switch — we walk through it methodically.",
+          icon: "Flame",
+        },
+        {
+          title: "Short-Cycling",
+          description:
+            "Turning on and off too often is a sign of overheating, dirty filter, or thermostat trouble. We find the cause.",
+          icon: "Repeat",
+        },
+        {
+          title: "Blower Won't Run",
+          description:
+            "Dead capacitor, failed blower motor, or control board issue — we test before we replace.",
+          icon: "Fan",
+        },
+        {
+          title: "Cracked Heat Exchanger",
+          description:
+            "A safety issue we always inspect for. If we find one, we'll explain your options honestly.",
+          icon: "AlertTriangle",
+        },
+        {
+          title: "Strange Noises",
+          description:
+            "Bangs, squeals, or rumbles aren't normal. They almost always indicate something specific we can diagnose.",
+          icon: "Volume2",
+        },
+        {
+          title: "Floor Furnace Service",
+          description:
+            "Older homes in OKC still rely on floor furnaces — we know how to service and replace them safely.",
+          icon: "PanelBottom",
+        },
+      ],
+    },
+    topicSectionB: {
+      eyebrow: "Why OKC Trusts Advantage",
+      heading: "Furnace Repair & Replacement Built for Oklahoma",
+      subtitle:
+        "Local pros who'll show up fast, fix it right, and stand behind the work.",
+      items: [
+        {
+          title: "No-Heat Priority",
+          description:
+            "When you have no heat in winter, your call goes to the front of the queue.",
+          icon: "Snowflake",
+        },
+        {
+          title: "Up-Front Quotes",
+          description:
+            "Every repair is priced in writing before we touch anything. You decide whether to proceed.",
+          icon: "Receipt",
+        },
+        {
+          title: "Local Service Vans",
+          description:
+            "We're already in the metro — most calls get a tech in a couple hours, not a couple days.",
+          icon: "Truck",
+        },
+        {
+          title: "Workmanship Warranty",
+          description:
+            "If a repair fails because of our work, we come back and make it right at no charge.",
+          icon: "BadgeCheck",
+        },
+      ],
+    },
+  },
+
+  // ============================================================
+  // 5. WATER HEATER SERVICES
+  // ============================================================
+  {
+    slug: "full-service-water-heater-services",
+    title: "Water Heater Services",
+    excerpt:
+      "Tank, tankless, gas, or electric — we install, repair, and replace water heaters across the Oklahoma City metro. Same-day service for no-hot-water emergencies.",
+    icon: "Droplets",
+    cardImage: "service-water",
+    heroImage: "service-water-hero",
+    description: [
+      "When the hot water quits, the whole house grinds to a halt. Advantage handles the full range of water heater services — tank-style replacements, tankless conversions, repairs, and routine maintenance — for every fuel type. Most no-hot-water calls are diagnosed and fixed the same day.",
+      "If your tank is past 10 years old, leaking, or running lukewarm, we'll give you a fair side-by-side comparison: repair, like-for-like replacement, or a tankless upgrade. No upselling.",
+    ],
+    benefits: [
+      {
+        title: "Tank & Tankless",
+        description:
+          "Conventional 40/50-gallon tanks or modern tankless on-demand systems — we install and service both.",
+        icon: "Box",
+      },
+      {
+        title: "Gas & Electric",
+        description:
+          "Natural gas, propane, or electric — every fuel type is handled by our crew.",
+        icon: "Plug",
+      },
+      {
+        title: "Same-Day Replacement",
+        description:
+          "Most tank replacements are done in a few hours so you have hot water by dinner.",
+        icon: "Clock",
+      },
+      {
+        title: "Code-Compliant Install",
+        description:
+          "Proper venting, T&P relief, expansion tank, and pan — installed to code and inspected.",
+        icon: "ClipboardCheck",
+      },
+    ],
+    features: [
+      "Free in-home replacement estimate",
+      "Tank water heater replacement (gas or electric)",
+      "Tankless / on-demand water heater install",
+      "Power-vent and direct-vent installations",
+      "Anode rod replacement & tank flush",
+      "T&P relief valve replacement",
+      "Thermocouple, igniter & gas valve repair",
+      "Heating element & thermostat replacement (electric)",
+      "Drip pan, expansion tank & shut-off install",
+      "Old unit haul-away and disposal",
+    ],
+    detailImages: ["img-water-heater-knob", "img-condenser-closeup"],
+    faqKeys: [
+      "faq-water-1",
+      "faq-water-2",
+      "faq-general-1",
+      "faq-general-3",
+      "faq-general-5",
+      "faq-general-6",
+    ],
+    ctaHeading: "No Hot Water?",
+    ctaText:
+      "Call now for same-day water heater service across Oklahoma City. Repair, replace, or upgrade to tankless.",
+    topicSectionA: {
+      eyebrow: "Water Heater Services",
+      heading: "Full-Service Water Heater Work in Oklahoma City, OK",
+      subtitle:
+        "Whether yours is leaking, lukewarm, or 15 years old — we handle it all.",
+      items: [
+        {
+          title: "Tank Replacement",
+          description:
+            "40-, 50-, and 75-gallon tanks installed properly with new connections and code-compliant venting.",
+          icon: "Cylinder",
+        },
+        {
+          title: "Tankless Conversion",
+          description:
+            "Switch to endless on-demand hot water and save floor space — we'll size and install it right.",
+          icon: "Infinity",
+        },
+        {
+          title: "Repair Service",
+          description:
+            "Pilot light, thermocouple, gas valve, heating elements, thermostats — diagnosed and fixed fast.",
+          icon: "Wrench",
+        },
+        {
+          title: "Annual Maintenance",
+          description:
+            "Tank flush, anode rod check, and combustion test — adds years to the life of your water heater.",
+          icon: "CalendarCheck",
+        },
+        {
+          title: "Power-Vent & Direct-Vent",
+          description:
+            "Tight-clearance installs that need power venting or sealed combustion are no problem.",
+          icon: "Wind",
+        },
+        {
+          title: "Hard-Water Solutions",
+          description:
+            "Oklahoma's hard water shortens water heater life. We can install softeners and recommend best-practice flush schedules.",
+          icon: "Droplet",
+        },
+      ],
+    },
+    topicSectionB: {
+      eyebrow: "Why OKC Calls Advantage",
+      heading: "Water Heater Service Trusted Across the Metro",
+      subtitle:
+        "Same-day service, fair pricing, and an honest answer on whether you should repair or replace.",
+      items: [
+        {
+          title: "Same-Day Hot Water",
+          description:
+            "Most tank replacements are wrapped up in a single afternoon — you'll have hot showers by tonight.",
+          icon: "Clock",
+        },
+        {
+          title: "All Fuels & Brands",
+          description:
+            "AO Smith, Rheem, Bradford White, Navien, Rinnai, Noritz — gas, electric, and tankless from every major maker.",
+          icon: "Settings",
+        },
+        {
+          title: "Permitted Installs",
+          description:
+            "We pull permits and pass inspection so your install is documented and warranty-protected.",
+          icon: "FileCheck",
+        },
+        {
+          title: "25+ Years Local",
+          description:
+            "Two decades of water heater work means we know what fits OKC homes — and what to avoid.",
+          icon: "Award",
+        },
+      ],
+    },
+  },
+
+  // ============================================================
+  // 6. COMMERCIAL HVAC
+  // ============================================================
+  {
+    slug: "commercial-hvac-services",
+    title: "Commercial HVAC Services",
+    excerpt:
+      "Reliable commercial HVAC service for offices, retail, restaurants, churches, and small industrial buildings across Oklahoma City. Planned maintenance and emergency response.",
+    icon: "Building2",
+    cardImage: "service-commercial",
+    heroImage: "service-commercial-hero",
+    description: [
+      "When your HVAC fails on a commercial property, every minute costs money — empty showrooms, unhappy tenants, spoiled inventory. Advantage Heating & Air Conditioning provides full-scope commercial HVAC service across the OKC metro, including planned maintenance contracts that keep your equipment running and your tenants comfortable.",
+      "We service rooftop units (RTUs), split systems, mini-splits, make-up air, and exhaust ventilation for buildings of every size — from a single-tenant retail space to a multi-unit office complex.",
+    ],
+    benefits: [
+      {
+        title: "Planned Maintenance",
+        description:
+          "Scheduled tune-ups that catch issues early and keep your warranty in good standing.",
+        icon: "CalendarCheck",
+      },
+      {
+        title: "24/7 Emergency Response",
+        description:
+          "Commercial down? Call any hour — we treat every commercial outage as a priority.",
+        icon: "Clock",
+      },
+      {
+        title: "Rooftop Unit Specialists",
+        description:
+          "RTU installs, repairs, and changeouts. We're equipped, certified, and insured for rooftop work.",
+        icon: "Building2",
+      },
+      {
+        title: "Multi-Site Coverage",
+        description:
+          "If you manage multiple OKC properties, we'll keep them all on a coordinated maintenance schedule.",
+        icon: "Map",
+      },
+    ],
+    features: [
+      "Rooftop unit (RTU) install, repair, and replacement",
+      "Split system & mini-split service",
+      "Make-up air and exhaust ventilation work",
+      "Refrigerant leak detection & repair",
+      "Belt, motor, and bearing service",
+      "Thermostat & control system upgrades",
+      "Filter & coil cleaning programs",
+      "Annual service agreements with fixed pricing",
+      "After-hours emergency dispatch",
+      "Property-management-friendly invoicing",
+    ],
+    detailImages: ["service-commercial-feature", "img-air-duct-vent"],
+    faqKeys: [
+      "faq-commercial-1",
+      "faq-commercial-2",
+      "faq-general-1",
+      "faq-general-4",
+      "faq-general-6",
+      "faq-general-8",
+    ],
+    ctaHeading: "Need a Commercial HVAC Partner?",
+    ctaText:
+      "We service properties across the OKC metro — call to set up a maintenance program or get a repair quote.",
+    topicSectionA: {
+      eyebrow: "Commercial Capabilities",
+      heading: "Commercial HVAC Services in Oklahoma City, OK",
+      subtitle:
+        "Full-scope work for property managers, business owners, and multi-site operators.",
+      items: [
+        {
+          title: "Office Buildings",
+          description:
+            "Multi-zone systems, conference room comfort, and after-hours service that doesn't disrupt tenants.",
+          icon: "Briefcase",
+        },
+        {
+          title: "Retail & Restaurants",
+          description:
+            "Make-up air, exhaust, walk-in cooler service, and refrigeration coordination.",
+          icon: "ShoppingBag",
+        },
+        {
+          title: "Churches & Schools",
+          description:
+            "Large-volume comfort that needs to come up fast for events and stay quiet during services.",
+          icon: "Church",
+        },
+        {
+          title: "Light Industrial",
+          description:
+            "Manufacturing and warehouse heating, cooling, and ventilation built around your operation.",
+          icon: "Factory",
+        },
+        {
+          title: "Property Management",
+          description:
+            "Single point of contact, transparent invoicing, and coordinated multi-site scheduling.",
+          icon: "Map",
+        },
+        {
+          title: "Tenant Build-Outs",
+          description:
+            "HVAC design, install, and commissioning for new tenant fit-outs and remodels.",
+          icon: "Hammer",
+        },
+      ],
+    },
+    topicSectionB: {
+      eyebrow: "Why OKC Businesses Choose Advantage",
+      heading: "Commercial HVAC You Can Plan Around",
+      subtitle:
+        "Predictable service, fixed-price agreements, and a local crew that shows up.",
+      items: [
+        {
+          title: "Local Response Time",
+          description:
+            "We're in the OKC metro — when commercial downtime is costing you, we're not flying in from Dallas.",
+          icon: "Clock",
+        },
+        {
+          title: "Fixed-Price Agreements",
+          description:
+            "Annual maintenance contracts with predictable pricing so HVAC stays a budget line, not a surprise.",
+          icon: "FileText",
+        },
+        {
+          title: "Permitted & Insured",
+          description:
+            "Fully licensed, insured, and equipped for commercial work — including rooftop liability.",
+          icon: "ShieldCheck",
+        },
+        {
+          title: "Single Point of Contact",
+          description:
+            "One call, one contact, one invoice — for one property or twenty.",
           icon: "PhoneCall",
         },
       ],
     },
   },
+
+  // ============================================================
+  // 7. VENTILATION, AIR DUCT & DUCTLESS MINI-SPLIT
+  // ============================================================
   {
-    slug: "service-three",
-    title: "Service Three",
+    slug: "ventilation-air-duct-services-oklahoma-city",
+    title: "Ventilation, Air Duct & Ductless Mini-Split Services",
     excerpt:
-      "Seamless coordination between all project stakeholders. We manage the full lifecycle so nothing falls through the cracks.",
-    icon: "ClipboardList",
-    cardImage: "service-3",
-    heroImage: "service-3-hero",
+      "Ductwork, ventilation, indoor air quality, and ductless mini-split installation across the OKC metro. Better airflow means better comfort and lower bills.",
+    icon: "AirVent",
+    cardImage: "service-vent",
+    heroImage: "service-vent-hero",
     description: [
-      "Our third service focuses on comprehensive project management and coordination. We take the complexity out of large-scale work by providing a single point of accountability.",
-      "From procurement and scheduling to quality control and budget management, our team ensures every detail is handled professionally. You get complete transparency and peace of mind throughout the entire process.",
+      "Even the best HVAC system can't outperform bad ductwork. Leaky, undersized, or improperly designed ducts can rob 20–30% of your conditioned air before it ever reaches your living space. Advantage handles full ductwork design, repair, and replacement — plus ventilation work, indoor air quality upgrades, and ductless mini-split installation for spaces that don't have ducts at all.",
+      "If you've got hot rooms, dusty vents, weak airflow, or a garage/sunroom that just won't get comfortable, the answer is usually here.",
     ],
     benefits: [
       {
-        title: "Single Point of Contact",
+        title: "Real Airflow Diagnosis",
         description:
-          "One dedicated manager handles all coordination, communication, and problem-solving.",
-        icon: "UserCheck",
+          "Static pressure testing and balancing — we find the problem before quoting the fix.",
+        icon: "Activity",
       },
       {
-        title: "Budget Control",
+        title: "Mini-Split Specialists",
         description:
-          "Real-time budget tracking with transparent reporting at every milestone.",
-        icon: "DollarSign",
+          "Single-zone and multi-zone ductless installs from leading manufacturers, fully warrantied.",
+        icon: "AirVent",
       },
       {
-        title: "Risk Management",
+        title: "Indoor Air Quality",
         description:
-          "Proactive identification and mitigation of potential issues before they become problems.",
-        icon: "ShieldCheck",
+          "Filtration upgrades, UV lights, and humidity control for a healthier home.",
+        icon: "Wind",
       },
       {
-        title: "Complete Documentation",
+        title: "Ductwork Built Right",
         description:
-          "Detailed records of every decision, change, and milestone for your peace of mind.",
-        icon: "FileText",
+          "Sized, sealed, and insulated — so the system you paid for actually delivers full airflow to every room.",
+        icon: "Layers",
       },
     ],
     features: [
-      "Full project scoping",
-      "Vendor and subcontractor management",
-      "Daily progress monitoring",
-      "Budget tracking and reporting",
-      "Safety protocol enforcement",
-      "Permit and compliance management",
-      "Milestone walkthroughs",
-      "Final closeout and documentation",
+      "Ductwork design, repair, and replacement",
+      "Ductless mini-split install (single & multi-zone)",
+      "Static pressure testing & airflow balance",
+      "Duct sealing (mastic and Aeroseal-style)",
+      "Return-air upgrades for under-served homes",
+      "Whole-home filter upgrades",
+      "UV germicidal lights & air purifier install",
+      "Whole-home humidifier & dehumidifier install",
+      "Bath & kitchen exhaust ventilation",
+      "Make-up air and pressure balancing",
     ],
-    detailImages: ["service-3-detail-1", "service-3-detail-2"],
+    detailImages: ["service-vent-feature", "service-vent-mini-split"],
     faqKeys: [
+      "faq-vent-1",
+      "faq-vent-2",
+      "faq-general-1",
       "faq-general-2",
-      "faq-general-5",
       "faq-general-6",
-      "faq-s3-1",
-      "faq-s3-2",
-      "faq-s3-3",
+      "faq-general-8",
     ],
-    ctaHeading: "Start Your Project Right",
+    ctaHeading: "Hot Rooms or Bad Airflow?",
     ctaText:
-      "Professional management from day one. Contact us to learn how we can help.",
+      "Schedule a free duct & airflow inspection — we'll show you exactly where your air is going and what to do about it.",
     topicSectionA: {
-      eyebrow: "Full-Scope Management",
-      heading: "Comprehensive Service Three in Springfield, IL",
+      eyebrow: "Ventilation & Airflow Services",
+      heading: "Ductwork, IAQ & Mini-Splits in Oklahoma City, OK",
       subtitle:
-        "End-to-end project oversight that keeps everything on track, on budget, and on standard.",
+        "Better air movement means better comfort, lower power bills, and fewer dust and humidity problems.",
       items: [
         {
-          title: "Scope Development",
+          title: "Duct Repair & Sealing",
           description:
-            "Thorough project scoping that defines every deliverable, timeline, and cost before work begins.",
-          icon: "Target",
+            "Patch leaks, replace damaged sections, and seal joints so 100% of your conditioned air reaches the room.",
+          icon: "Wrench",
         },
         {
-          title: "Vendor Coordination",
+          title: "New Duct Install",
           description:
-            "Management of all subcontractors and suppliers with rigorous vetting and performance tracking.",
-          icon: "Network",
+            "Properly sized, insulated supply and return ducts for new builds, additions, and full retrofits.",
+          icon: "Layers",
         },
         {
-          title: "Schedule Optimization",
+          title: "Ductless Mini-Splits",
           description:
-            "Strategic sequencing of work phases to minimize delays and maximize efficiency across all teams.",
-          icon: "CalendarClock",
+            "Garages, sunrooms, additions, and ductless homes — single- and multi-zone systems installed right.",
+          icon: "AirVent",
         },
         {
-          title: "Budget Transparency",
+          title: "Indoor Air Quality",
           description:
-            "Line-item budget tracking with regular financial reporting so you always know where every dollar goes.",
-          icon: "PieChart",
+            "Whole-home media filters, UV lights, and air purifiers for cleaner, healthier indoor air.",
+          icon: "Sparkles",
         },
         {
-          title: "Safety Compliance",
+          title: "Humidity Control",
           description:
-            "Rigorous safety protocols and OSHA compliance enforced across every job site we manage.",
-          icon: "HardHat",
+            "Whole-home humidifiers for dry winters and dehumidifiers for sticky Oklahoma summers.",
+          icon: "Droplets",
         },
         {
-          title: "Quality Control",
+          title: "Exhaust Ventilation",
           description:
-            "Systematic inspection checkpoints and quality holdpoints that prevent issues before they escalate.",
-          icon: "SearchCheck",
+            "Bath fans, kitchen hoods, dryer vents, and make-up air systems — installed correctly to code.",
+          icon: "Wind",
         },
       ],
     },
     topicSectionB: {
-      eyebrow: "Springfield Project Experts",
-      heading: "Service Three Trusted Across Springfield, IL",
+      eyebrow: "Why OKC Trusts Advantage",
+      heading: "Ductwork & Ventilation Done the Right Way",
       subtitle:
-        "The local project management partner that property owners and developers rely on.",
+        "Proper airflow makes the rest of your HVAC system actually work the way it's supposed to.",
       items: [
         {
-          title: "Multi-Phase Experience",
+          title: "Diagnose Before We Quote",
           description:
-            "Proven ability to manage complex, multi-phase projects across residential and commercial properties.",
-          icon: "Layers",
+            "We measure airflow and static pressure first — so the fix actually fixes the symptom you're feeling.",
+          icon: "Search",
         },
         {
-          title: "Permit Navigation",
+          title: "Real Mini-Split Experience",
           description:
-            "Streamlined permitting through established relationships with local building departments.",
-          icon: "Stamp",
+            "We install ductless systems weekly across the OKC metro — not a once-a-year side project.",
+          icon: "Zap",
         },
         {
-          title: "Owner Representation",
+          title: "Local Climate Knowledge",
           description:
-            "We act as your on-site representative, protecting your interests at every decision point.",
-          icon: "Shield",
+            "Oklahoma humidity, dust, and pollen are real. We design ventilation that actually handles them.",
+          icon: "Sun",
         },
         {
-          title: "Closeout Excellence",
+          title: "Built to Last",
           description:
-            "Comprehensive project closeout including documentation, warranties, and final accounting.",
-          icon: "CheckSquare",
+            "Properly insulated, properly sealed, properly supported — work that won't sag or leak in five years.",
+          icon: "ShieldCheck",
         },
       ],
     },

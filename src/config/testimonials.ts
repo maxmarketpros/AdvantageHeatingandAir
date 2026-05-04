@@ -1,28 +1,26 @@
 import type { TestimonialItem } from "@/types";
 
+// Real Google reviews for Advantage Heating & Air Conditioning
 export const testimonials: TestimonialItem[] = [
   {
-    name: "Sarah Mitchell",
-    title: "Homeowner, Springfield",
+    name: "Mia Smolin",
+    title: "Oklahoma City Homeowner",
     quote:
-      "From the first consultation to the final walkthrough, the entire experience was exceptional. They communicated every step of the way and the quality of work exceeded our expectations.",
+      "My husband called Advantage Heating and Air Conditioning last night to check out our old, ancient AC unit, and they were fantastic! They came out as soon as we were available, figured out the issue, and had it fixed in no time. Chase and Joseph were very nice, professional, and extremely knowledgeable. Highly recommend them!",
     rating: 5,
-    image: "testimonial-1",
   },
   {
-    name: "James Rodriguez",
-    title: "Property Owner, Shelbyville",
+    name: "Lacy Robinson",
+    title: "Oklahoma City Customer",
     quote:
-      "I've worked with several companies over the years, but none have matched this level of professionalism. The project was completed on time, on budget, and the attention to detail was incredible.",
+      "Wonderful guys — came out the same day. Needed a new furnace and got one installed for me. Amazing! Was professional and helpful. They worked with me from the Oklahoma City area. I love these guys — thank you so much for everything.",
     rating: 5,
-    image: "testimonial-2",
   },
   {
-    name: "Karen Thompson",
-    title: "Homeowner, Capital City",
+    name: "Jose Herrera",
+    title: "Local Guide · Oklahoma City",
     quote:
-      "What sets them apart is the transparency. We knew exactly where every dollar was going and the owner was personally involved throughout the entire project. That kind of accountability is rare.",
+      "Called them out for a heater call. Dave was awesome — got our heater back online fast right before Christmas. Awesome company from Oklahoma City. Go with these guys, they're amazing people. Honest. Thank you all very much.",
     rating: 5,
-    image: "testimonial-3",
   },
 ];

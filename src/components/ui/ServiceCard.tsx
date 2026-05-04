@@ -39,7 +39,7 @@ export function ServiceCard({ service, className }: ServiceCardProps) {
           {service.excerpt}
         </p>
         <Link
-          href={`/services/${service.slug}`}
+          href={`/${service.slug}`}
           className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wider text-primary-500 transition-colors hover:text-primary-700"
         >
           Explore Service

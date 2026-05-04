@@ -26,8 +26,6 @@ export interface ServiceConfig {
   faqKeys: string[];
   ctaHeading: string;
   ctaText: string;
-  // SEO-focused sub-topic sections for service pages
-  // These provide keyword-rich content with icon cards
   topicSectionA: {
     eyebrow: string;
     heading: string;
@@ -84,3 +82,35 @@ export interface FooterGroup {
   title: string;
   links: { label: string; href: string }[];
 }
+
+// ===== AREA PAGES =====
+export interface AreaConfig {
+  slug: string;
+  city: string;
+  cityFull: string; // e.g. "Edmond, OK"
+  title: string; // page H1 — e.g. "Air Conditioning Contractor in Edmond, OK"
+  excerpt: string; // ~1 sentence intro under hero
+  intro: string[]; // 2–3 paragraphs of unique local copy
+  localHook: string; // 1 sentence local-flavor reference (neighborhoods, landmarks, weather)
+  topServices: string[]; // 4–6 service slugs/labels relevant to this area
+  faqKeys: string[];
+}
+
+// ===== BLOG POSTS =====
+export interface BlogPostConfig {
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string; // ISO date, e.g. "2024-08-15"
+  readTime: string; // e.g. "5 min read"
+  heroImage: string; // imageManifest key
+  body: BlogBlock[];
+}
+
+export type BlogBlock =
+  | { type: "h2"; text: string }
+  | { type: "h3"; text: string }
+  | { type: "p"; text: string }
+  | { type: "ul"; items: string[] }
+  | { type: "ol"; items: string[] }
+  | { type: "quote"; text: string };

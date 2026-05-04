@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { ArrowRight, Phone } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { SplitSection } from "@/components/sections/SplitSection";
 import { BenefitGrid } from "@/components/sections/BenefitGrid";
@@ -7,62 +6,35 @@ import { ServiceScopeSection } from "@/components/sections/ServiceScopeSection";
 import { TopicCardGrid } from "@/components/sections/TopicCardGrid";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
-import { QuoteSection } from "@/components/sections/QuoteSection";
 import { FeatureList } from "@/components/sections/FeatureList";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
-import { services } from "@/config/services";
 import { businessConfig } from "@/config/business";
-import { generatePageMetadata } from "@/lib/metadata";
 import {
   generateServiceSchema,
   generateBreadcrumbSchema,
 } from "@/lib/structured-data";
-import { ArrowRight, Phone } from "lucide-react";
+import type { ServiceConfig } from "@/types";
 
-interface ServicePageProps {
-  params: Promise<{ slug: string }>;
+interface ServicePageBodyProps {
+  service: ServiceConfig;
 }
 
-const { city, state } = businessConfig.address;
-const cityState = `${city}, ${state}`;
-const ctaProps = {
-  primary: { label: "Get a Quote", href: "/contact" },
-  secondary: { label: `Call ${businessConfig.phone}`, href: `tel:${businessConfig.phoneRaw}` },
-};
-
-export function generateStaticParams() {
-  return services.map((s) => ({ slug: s.slug }));
-}
-
-export async function generateMetadata({
-  params,
-}: ServicePageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const service = services.find((s) => s.slug === slug);
-  if (!service) return {};
-
-  return generatePageMetadata({
-    title: `${service.title} in ${cityState}`,
-    description: service.excerpt,
-    path: `/services/${service.slug}`,
-  });
-}
-
-export default async function ServicePage({ params }: ServicePageProps) {
-  const { slug } = await params;
-  const service = services.find((s) => s.slug === slug);
-
-  if (!service) {
-    notFound();
-  }
+export function ServicePageBody({ service }: ServicePageBodyProps) {
+  const ctaProps = {
+    primary: { label: "Get a Free Estimate", href: "/contact" },
+    secondary: {
+      label: `Call ${businessConfig.phone}`,
+      href: `tel:${businessConfig.phoneRaw}`,
+    },
+  };
 
   const featureListItems = service.detailImages.map((imgKey, i) => ({
-    title: i === 0 ? "Quality You Can See" : "Results That Last",
+    title: i === 0 ? "Done Right the First Time" : "Built to Last",
     description:
       i === 0
-        ? "Every project showcases our commitment to precision and craftsmanship. We take pride in delivering work that stands out for its quality and attention to detail."
-        : "Our work is built to last. We use premium materials and proven techniques to ensure your investment delivers value for years to come.",
+        ? "Every service call gets the same care: clean tools, written quotes, and an honest diagnosis. No commission, no upselling — just solid HVAC work you can rely on."
+        : "We use premium parts, take time to commission systems properly, and back our work with a written warranty. Comfort that holds up year after year.",
     imageKey: imgKey,
   }));
 
@@ -80,28 +52,25 @@ export default async function ServicePage({ params }: ServicePageProps) {
           __html: JSON.stringify(
             generateBreadcrumbSchema([
               { name: "Home", href: "/" },
-              { name: "Services", href: "/services" },
-              { name: service.title, href: `/services/${service.slug}` },
+              { name: service.title, href: `/${service.slug}` },
             ])
           ),
         }}
       />
 
-      {/* Page Hero — H1 includes city, state */}
       <PageHero
-        heading={`${service.title} in ${cityState}`}
+        heading={`${service.title} in Oklahoma City, OK`}
         subtitle={service.excerpt}
         imageKey={service.heroImage}
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Services", href: "/services" },
+          { label: "Services", href: "/#services" },
           { label: service.title },
         ]}
         primaryCta={ctaProps.primary}
         secondaryCta={ctaProps.secondary}
       />
 
-      {/* Overview */}
       <SplitSection
         imageKey={service.cardImage}
         imagePosition="right"
@@ -109,7 +78,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
       >
         <SectionHeading
           eyebrow="Overview"
-          heading={`Why Choose Our ${service.title}`}
+          heading={`Why Advantage for ${service.title}`}
         />
         {service.description.map((p, i) => (
           <p
@@ -120,11 +89,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </p>
         ))}
         <div className="mt-6 flex flex-wrap gap-4">
-          <Button
-            href="/contact"
-            icon={<ArrowRight className="h-5 w-5" />}
-          >
-            Get a Quote
+          <Button href="/contact" icon={<ArrowRight className="h-5 w-5" />}>
+            Get a Free Estimate
           </Button>
           <Button
             href={`tel:${businessConfig.phoneRaw}`}
@@ -136,66 +102,52 @@ export default async function ServicePage({ params }: ServicePageProps) {
         </div>
       </SplitSection>
 
-      {/* Benefits */}
       <BenefitGrid
         benefits={service.benefits}
-        eyebrow="What Sets Us Apart"
-        heading="Key Benefits"
-        subtitle={`Here's what makes our ${service.title.toLowerCase()} stand out from the rest.`}
+        eyebrow="Why Advantage"
+        heading="What You Get with Every Service Call"
+        subtitle="The standards we hold ourselves to on every job — big or small."
         bgColor="surface"
         primaryCta={ctaProps.primary}
         secondaryCta={ctaProps.secondary}
       />
 
-      {/* Feature showcase — alternating rows */}
       <FeatureList features={featureListItems} />
 
-      {/* SEO Topic Section A — above Complete Service Scope */}
       <TopicCardGrid
         eyebrow={service.topicSectionA.eyebrow}
         heading={service.topicSectionA.heading}
         subtitle={service.topicSectionA.subtitle}
         items={service.topicSectionA.items}
-        bgColor="surface"
-        primaryCta={ctaProps.primary}
-        secondaryCta={ctaProps.secondary}
+        bgColor="white"
       />
 
-      {/* What's Included */}
       <ServiceScopeSection
         items={service.features}
         primaryCta={ctaProps.primary}
         secondaryCta={ctaProps.secondary}
       />
 
-      {/* SEO Topic Section B — below Complete Service Scope */}
       <TopicCardGrid
         eyebrow={service.topicSectionB.eyebrow}
         heading={service.topicSectionB.heading}
         subtitle={service.topicSectionB.subtitle}
         items={service.topicSectionB.items}
         bgColor="surface"
-        primaryCta={ctaProps.primary}
-        secondaryCta={ctaProps.secondary}
       />
 
-      {/* FAQ — service-specific (6 questions now) */}
       <FAQSection
         eyebrow="Common Questions"
         heading={`${service.title} FAQ`}
         faqKeys={service.faqKeys}
       />
 
-      {/* CTA — service-specific */}
       <CTASection
         heading={service.ctaHeading}
         text={service.ctaText}
         primaryCta={ctaProps.primary}
         secondaryCta={ctaProps.secondary}
       />
-
-      {/* Quote Form */}
-      <QuoteSection />
     </>
   );
 }

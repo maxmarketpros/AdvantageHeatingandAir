@@ -3,10 +3,10 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { siteConfig } from "@/config/site";
 import { businessConfig } from "@/config/business";
 import { mainNav } from "@/config/navigation";
 import { cn } from "@/lib/utils";
@@ -92,14 +92,14 @@ function MobileMenu({
 
         <a
           href={`tel:${businessConfig.phoneRaw}`}
-          className="flex items-center gap-2 py-3 text-lg font-medium text-foreground"
+          className="flex items-center gap-2 py-3 text-lg font-bold text-accent-500"
         >
-          <Phone className="h-5 w-5 text-primary-500" />
+          <Phone className="h-5 w-5" />
           {businessConfig.phone}
         </a>
 
         <Button href="/contact" className="mt-2 w-full" onClick={onClose}>
-          Get a Quote
+          Get a Free Estimate
         </Button>
       </div>
     </div>,
@@ -130,27 +130,22 @@ export function Header() {
     };
   }, [mobileOpen]);
 
+  // Header is always solid-white so the landscape logo stays readable.
   return (
     <>
-      <header
-        className={cn(
-          "fixed top-0 left-0 right-0 z-[9999] transition-all duration-300",
-          scrolled || mobileOpen
-            ? "bg-white/95 backdrop-blur-md shadow-header"
-            : "bg-transparent"
-        )}
-      >
+      <header className="fixed top-0 left-0 right-0 z-[9999] bg-white shadow-header transition-all duration-300">
         <Container>
-          <nav className="flex h-20 items-center justify-between">
+          <nav className="flex h-20 items-center justify-between gap-4">
             {/* Logo */}
-            <Link
-              href="/"
-              className={cn(
-                "text-xl font-bold tracking-tight transition-colors",
-                scrolled || mobileOpen ? "text-foreground" : "text-white"
-              )}
-            >
-              {siteConfig.name}
+            <Link href="/" className="flex items-center" aria-label="Advantage Heating & Air Conditioning home">
+              <Image
+                src="/logo.png"
+                alt="Advantage Heating & Air Conditioning"
+                width={300}
+                height={100}
+                priority
+                className="h-12 w-auto md:h-14"
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -164,19 +159,14 @@ export function Header() {
                       onMouseLeave={() => setOpenDropdown(null)}
                     >
                       <button
-                        className={cn(
-                          "flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors",
-                          scrolled
-                            ? "text-foreground-light hover:text-primary-500"
-                            : "text-white/90 hover:text-white"
-                        )}
+                        className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground-light transition-colors hover:text-primary-500"
                       >
                         {item.label}
                         <ChevronDown className="h-3.5 w-3.5" />
                       </button>
                       <div
                         className={cn(
-                          "absolute top-full left-0 min-w-[200px] rounded-xl bg-white py-2 shadow-card-hover transition-all duration-200",
+                          "absolute top-full left-0 min-w-[280px] rounded-xl bg-white py-2 shadow-card-hover transition-all duration-200",
                           openDropdown === item.label
                             ? "visible translate-y-0 opacity-100"
                             : "invisible -translate-y-2 opacity-0"
@@ -196,12 +186,7 @@ export function Header() {
                   ) : (
                     <Link
                       href={item.href}
-                      className={cn(
-                        "px-4 py-2 text-sm font-medium transition-colors",
-                        scrolled
-                          ? "text-foreground-light hover:text-primary-500"
-                          : "text-white/90 hover:text-white"
-                      )}
+                      className="px-3 py-2 text-sm font-medium text-foreground-light transition-colors hover:text-primary-500"
                     >
                       {item.label}
                     </Link>
@@ -211,31 +196,23 @@ export function Header() {
             </div>
 
             {/* Desktop Right Side */}
-            <div className="hidden items-center gap-4 lg:flex">
+            <div className="hidden items-center gap-3 lg:flex">
               <a
                 href={`tel:${businessConfig.phoneRaw}`}
-                className={cn(
-                  "flex items-center gap-2 text-sm font-medium transition-colors",
-                  scrolled
-                    ? "text-foreground-light hover:text-primary-500"
-                    : "text-white/90 hover:text-white"
-                )}
+                className="flex items-center gap-2 text-sm font-bold text-accent-500 transition-colors hover:text-accent-700"
               >
                 <Phone className="h-4 w-4" />
                 {businessConfig.phone}
               </a>
               <Button href="/contact" size="sm">
-                Get a Quote
+                Get a Free Estimate
               </Button>
             </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className={cn(
-                "lg:hidden p-2 transition-colors",
-                scrolled || mobileOpen ? "text-foreground" : "text-white"
-              )}
+              className="p-2 text-foreground transition-colors lg:hidden"
               aria-label="Toggle menu"
             >
               {mobileOpen ? (
@@ -247,6 +224,9 @@ export function Header() {
           </nav>
         </Container>
       </header>
+
+      {/* Spacer to offset fixed header height */}
+      <div aria-hidden className="h-20" />
 
       {/* Mobile Menu — rendered via portal to document.body */}
       <MobileMenu

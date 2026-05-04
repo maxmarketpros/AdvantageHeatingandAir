@@ -2,10 +2,35 @@ import { siteConfig } from "@/config/site";
 import { businessConfig } from "@/config/business";
 import type { ServiceConfig } from "@/types";
 
+const DAY_ORDER = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"] as const;
+const DAY_FULL: Record<string, string> = {
+  Mo: "Monday",
+  Tu: "Tuesday",
+  We: "Wednesday",
+  Th: "Thursday",
+  Fr: "Friday",
+  Sa: "Saturday",
+  Su: "Sunday",
+};
+
+// Expand a "Mo-Sa" / "Mo-Su" / "Mo" specifier into the full list of days.
+function expandDayRange(spec: string): string[] {
+  if (!spec.includes("-")) {
+    return [DAY_FULL[spec]].filter(Boolean);
+  }
+  const [from, to] = spec.split("-");
+  const start = DAY_ORDER.indexOf(from as typeof DAY_ORDER[number]);
+  const end = DAY_ORDER.indexOf(to as typeof DAY_ORDER[number]);
+  if (start < 0 || end < 0) return [];
+  const out: string[] = [];
+  for (let i = start; i <= end; i++) out.push(DAY_FULL[DAY_ORDER[i]]);
+  return out;
+}
+
 export function generateLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "HVACBusiness"],
     name: siteConfig.name,
     description: siteConfig.description,
     url: siteConfig.url,
@@ -26,18 +51,7 @@ export function generateLocalBusinessSchema() {
     },
     openingHoursSpecification: businessConfig.hours.structured.map((h) => ({
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: h.days.split("-").map((d) => {
-        const map: Record<string, string> = {
-          Mo: "Monday",
-          Tu: "Tuesday",
-          We: "Wednesday",
-          Th: "Thursday",
-          Fr: "Friday",
-          Sa: "Saturday",
-          Su: "Sunday",
-        };
-        return map[d] || d;
-      }),
+      dayOfWeek: expandDayRange(h.days),
       opens: h.opens,
       closes: h.closes,
     })),
@@ -64,7 +78,7 @@ export function generateServiceSchema(service: ServiceConfig) {
       "@type": "City",
       name: area,
     })),
-    url: `${siteConfig.url}/services/${service.slug}`,
+    url: `${siteConfig.url}/${service.slug}`,
   };
 }
 
@@ -80,5 +94,35 @@ export function generateBreadcrumbSchema(
       name: item.name,
       item: `${siteConfig.url}${item.href}`,
     })),
+  };
+}
+
+export function generateBlogPostSchema(post: {
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    author: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteConfig.url}/logo.png`,
+      },
+    },
+    mainEntityOfPage: `${siteConfig.url}/${post.slug}`,
   };
 }

@@ -1,23 +1,33 @@
 @import "tailwindcss";
 
-/* ===== DESIGN TOKENS ===== */
-/* To re-theme: change the primary hue (currently ~210 steel blue) */
-/* Only this section needs editing to rebrand the entire site */
+/* ===== ADVANTAGE HEATING & AIR — DESIGN TOKENS ===== */
+/* Primary blue: #0048A5  |  Accent red: #E91415 */
 
 @theme {
-  /* -- Primary palette (steel blue) -- */
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e40af;
-  --color-primary-900: #1e3a5f;
+  /* -- Primary palette (Advantage blue, scaled around #0048A5) -- */
+  --color-primary-50: #e6eef9;
+  --color-primary-100: #c0d4ee;
+  --color-primary-200: #93b4e1;
+  --color-primary-300: #6294d3;
+  --color-primary-400: #357ac7;
+  --color-primary-500: #0048a5;
+  --color-primary-600: #003d8c;
+  --color-primary-700: #003373;
+  --color-primary-800: #00295a;
+  --color-primary-900: #001f43;
 
-  /* -- Secondary palette (warm amber, optional) -- */
+  /* -- Accent palette (Advantage red, used sparingly for emergency / call-to-action) -- */
+  --color-accent-50: #fde7e8;
+  --color-accent-100: #fbc4c5;
+  --color-accent-200: #f7898b;
+  --color-accent-300: #f24e51;
+  --color-accent-400: #ee2d30;
+  --color-accent-500: #e91415;
+  --color-accent-600: #c41011;
+  --color-accent-700: #9e0d0e;
+  --color-accent-800: #79090a;
+
+  /* -- Secondary palette (kept neutral; rarely used) -- */
   --color-secondary-50: #fffbeb;
   --color-secondary-100: #fef3c7;
   --color-secondary-200: #fde68a;
@@ -27,14 +37,14 @@
   --color-secondary-600: #d97706;
 
   /* -- Semantic colors -- */
-  --color-foreground: #1a1a2e;
+  --color-foreground: #0d1424;
   --color-foreground-light: #374151;
   --color-muted: #6b7280;
   --color-muted-light: #9ca3af;
   --color-border: #e5e7eb;
   --color-border-light: #f3f4f6;
-  --color-surface: #f8fafc;
-  --color-surface-dark: #f1f5f9;
+  --color-surface: #f7f9fc;
+  --color-surface-dark: #eef2f8;
   --color-background: #ffffff;
 
   /* -- Typography -- */
@@ -49,7 +59,7 @@
 
   /* -- Shadows -- */
   --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
-  --shadow-card-hover: 0 10px 25px -5px rgb(0 0 0 / 0.08), 0 4px 10px -6px rgb(0 0 0 / 0.04);
+  --shadow-card-hover: 0 10px 25px -5px rgb(0 72 165 / 0.12), 0 4px 10px -6px rgb(0 0 0 / 0.04);
   --shadow-header: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.06);
   --shadow-badge: 0 4px 14px -2px rgb(0 0 0 / 0.12);
 }
@@ -83,5 +93,34 @@
 
   .section-padding-sm {
     @apply py-12 md:py-16;
+  }
+
+  /* Long-form prose styling for blog posts */
+  .prose-blog {
+    @apply text-foreground-light;
+  }
+  .prose-blog h2 {
+    @apply mt-10 mb-4 text-2xl md:text-3xl font-bold text-foreground;
+  }
+  .prose-blog h3 {
+    @apply mt-8 mb-3 text-xl md:text-2xl font-bold text-foreground;
+  }
+  .prose-blog p {
+    @apply mb-5 text-base md:text-lg leading-relaxed text-foreground-light;
+  }
+  .prose-blog ul {
+    @apply mb-5 ml-6 list-disc space-y-2 text-base md:text-lg text-foreground-light;
+  }
+  .prose-blog ol {
+    @apply mb-5 ml-6 list-decimal space-y-2 text-base md:text-lg text-foreground-light;
+  }
+  .prose-blog a {
+    @apply text-primary-500 underline hover:text-primary-700;
+  }
+  .prose-blog strong {
+    @apply font-semibold text-foreground;
+  }
+  .prose-blog blockquote {
+    @apply my-6 border-l-4 border-primary-500 bg-surface px-6 py-4 italic text-foreground-light;
   }
 }

@@ -1,51 +1,51 @@
 export const aboutContent = {
   hero: {
-    heading: "About Us",
+    heading: "About Advantage Heating & Air Conditioning",
     subtitle:
-      "Discover the story, values, and experience behind our commitment to quality.",
+      "A family-owned Oklahoma City HVAC contractor that's been keeping the metro comfortable for more than 25 years.",
   },
   story: {
     eyebrow: "Our Story",
-    heading: "Built on Experience. Driven by Standards.",
+    heading: "25+ Years of Honest, Local HVAC Work",
     paragraphs: [
-      "We believe the best service professionals are the ones who have actually done the work themselves. Our company wasn't built in an office — it was forged through years of hands-on experience in the field.",
-      "Our foundational roots go deep into the core of our craft. Before becoming a leading service provider in the region, we mastered the fundamental skills that separate good work from great work.",
-      "This hands-on background gives us a unique advantage. When our team manages a project, we aren't just looking at spreadsheets. We understand the quality required because we've done the work ourselves. This translates to higher standards, better problem-solving, and a superior finished product for our clients.",
+      "Advantage Heating & Air Conditioning was started right here in Oklahoma City with a simple idea: do good work, charge a fair price, and treat customers like neighbors. More than two decades later, that's still how we run the business.",
+      "We've grown from a small operation into a full-service residential and commercial HVAC contractor — but we've stayed family-owned, locally-staffed, and stubbornly committed to the kind of service the big national chains can't match.",
+      "Every technician on our crew is NATE-certified, drug-tested, and trained on the latest equipment from every major HVAC manufacturer. We're a certified Amana Heating & Cooling installer, an Air Conditioning Contractors of America member, and BBB-accredited. But the credentials we're most proud of are the five-star reviews and word-of-mouth referrals from the families who've trusted us for years.",
     ],
     image: "about-story",
   },
   values: {
-    eyebrow: "Our Values",
-    heading: "What We Stand For",
+    eyebrow: "What We Stand For",
+    heading: "The Way We Do Business",
     items: [
       {
-        title: "Integrity First",
+        title: "Show Up When You Say You Will",
         description:
-          "We do what we say we'll do, every time. Our reputation is built on keeping promises.",
+          "We answer the phone 24/7 and stick to our appointment windows. If we're running late, you get a call — not a guess.",
       },
       {
-        title: "Quality Without Compromise",
+        title: "Quote in Writing, Up Front",
         description:
-          "We never cut corners. Every project receives our full attention and highest standards.",
+          "Every job gets a written estimate before any work starts. No mystery charges, no commission-driven upsells.",
       },
       {
-        title: "Transparent Communication",
+        title: "Best Price, Period",
         description:
-          "You'll always know where your project stands. No guessing, no chasing updates.",
+          "Find a lower price on a comparable install? We'll match or beat it. Our pricing is fair the first time.",
       },
       {
-        title: "Community Commitment",
+        title: "Stand Behind the Work",
         description:
-          "We live and work in this community. Your success is our success.",
+          "Workmanship warranty on every install. If something isn't right, we make it right — no run-around.",
       },
     ],
   },
   team: {
-    eyebrow: "Owner-Led",
-    heading: "Personally Invested in Every Project",
+    eyebrow: "Our Crew",
+    heading: "Local Techs Who Treat Your Home Like Their Own",
     paragraphs: [
-      "Every project we take on receives direct owner involvement. This isn't a large corporation where your project gets passed between departments — you work directly with the person whose name is on the business.",
-      "This level of personal investment means faster decisions, higher accountability, and a genuine commitment to your satisfaction that you simply can't get from larger operations.",
+      "When an Advantage truck pulls into your driveway, the technician stepping out lives in the metro and works for a company that's earned its name one customer at a time.",
+      "Our techs aren't paid on commission — there's no incentive to push you toward a more expensive repair than you actually need. The job is to diagnose the problem, fix it the right way, and earn your call again next time.",
     ],
     image: "about-team",
   },

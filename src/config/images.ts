@@ -1,180 +1,297 @@
 import type { ImageSlotConfig } from "@/types";
 
 // ===== IMAGE MANIFEST =====
-// Every image on the site has a named slot.
-// To assign real images: replace the src path and update alt text.
-// focalPoint: { x: 0-1, y: 0-1 } controls object-position (default: center/center)
-//
-// FUTURE WORKFLOW:
-// 1. Add client images to /public/images/
-// 2. Update this manifest to point each slot to the right file
-// 3. Claude can analyze images and recommend slot assignments based on composition
+// Every named slot used by ImageSlot.tsx is defined here.
+// All photos are 1920x1080 stock unless otherwise noted.
 
 export const imageManifest: Record<string, ImageSlotConfig> = {
   // ===== HOMEPAGE =====
   "hero-home": {
-    src: "/images/hero-home.jpg",
-    alt: "Professional service work showcasing quality craftsmanship",
+    src: "/images/commercial-rooftop-chillers.jpg",
+    alt: "Advantage Heating & Air Conditioning technicians servicing rooftop equipment in Oklahoma City",
+    width: 1920,
+    height: 1080,
+    focalPoint: { x: 0.5, y: 0.45 },
+  },
+  "about-preview": {
+    src: "/images/condenser-closeup.jpg",
+    alt: "Premium residential AC condenser installed by Advantage Heating & Air",
+    width: 1920,
+    height: 1080,
+    focalPoint: { x: 0.5, y: 0.5 },
+  },
+  "standards-feature": {
+    src: "/images/tech-thumbs-up.jpg",
+    alt: "Advantage HVAC technician giving a thumbs up after completing a service call",
+    width: 1920,
+    height: 1080,
+    focalPoint: { x: 0.6, y: 0.4 },
+  },
+
+  // ===== SERVICE: AC INSTALLATION =====
+  "service-ac-install": {
+    src: "/images/outdoor-ac-staged.jpg",
+    alt: "New residential AC unit installed in an Oklahoma City backyard",
+    width: 1920,
+    height: 1080,
+  },
+  "service-ac-install-hero": {
+    src: "/images/outdoor-ac-staged.jpg",
+    alt: "AC installation and replacement in Oklahoma City",
+    width: 1920,
+    height: 1080,
+    focalPoint: { x: 0.4, y: 0.5 },
+  },
+  "service-ac-install-feature": {
+    src: "/images/condenser-row.jpg",
+    alt: "Multiple residential AC condensers installed by Advantage Heating & Air",
+    width: 1920,
+    height: 1080,
+  },
+
+  // ===== SERVICE: AC REPAIR =====
+  "service-ac-repair": {
+    src: "/images/ac-refrigerant-gauges.jpg",
+    alt: "Advantage technician using refrigerant gauges to diagnose an AC unit",
+    width: 1920,
+    height: 1080,
+  },
+  "service-ac-repair-hero": {
+    src: "/images/tech-blue-helmet.jpg",
+    alt: "AC repair technician working on an outdoor unit in Oklahoma City",
+    width: 1920,
+    height: 1080,
+    focalPoint: { x: 0.5, y: 0.45 },
+  },
+  "service-ac-repair-feature": {
+    src: "/images/tech-outdoor-unit-crouch.jpg",
+    alt: "Technician inspecting outdoor AC components",
+    width: 1920,
+    height: 1080,
+  },
+
+  // ===== SERVICE: HEATING INSTALLATION =====
+  "service-heating": {
+    src: "/images/heating-pipes-repair.jpg",
+    alt: "Heating system installation in an Oklahoma City home",
+    width: 1920,
+    height: 1080,
+  },
+  "service-heating-hero": {
+    src: "/images/heating-pipes-repair.jpg",
+    alt: "Heating system installation services in Oklahoma City",
     width: 1920,
     height: 1080,
     focalPoint: { x: 0.5, y: 0.4 },
   },
-  "about-preview": {
-    src: "/images/about-preview.jpg",
-    alt: "Quality workmanship on a recent project",
-    width: 800,
-    height: 1000,
-    focalPoint: { x: 0.5, y: 0.3 },
-  },
-  "standards-feature": {
-    src: "/images/standards-feature.jpg",
-    alt: "Active project demonstrating our high standards",
-    width: 800,
-    height: 1000,
-    focalPoint: { x: 0.5, y: 0.4 },
+  "service-heating-feature": {
+    src: "/images/tech-control-panel.jpg",
+    alt: "Technician inspecting an HVAC control panel",
+    width: 1920,
+    height: 1080,
   },
 
-  // ===== SERVICE CARDS =====
-  "service-1": {
-    src: "/images/service-1.jpg",
-    alt: "Service one project example",
-    width: 800,
-    height: 600,
+  // ===== SERVICE: FURNACE =====
+  "service-furnace": {
+    src: "/images/tech-control-panel.jpg",
+    alt: "Furnace repair and replacement in Oklahoma City",
+    width: 1920,
+    height: 1080,
   },
-  "service-2": {
-    src: "/images/service-2.jpg",
-    alt: "Service two project example",
-    width: 800,
-    height: 600,
+  "service-furnace-hero": {
+    src: "/images/hvac-component-closeup.jpg",
+    alt: "Close-up of furnace components during a repair",
+    width: 1920,
+    height: 1080,
+    focalPoint: { x: 0.4, y: 0.5 },
   },
-  "service-3": {
-    src: "/images/service-3.jpg",
-    alt: "Service three project example",
-    width: 800,
-    height: 600,
+  "service-furnace-feature": {
+    src: "/images/heating-pipes-repair.jpg",
+    alt: "Furnace heating system being serviced",
+    width: 1920,
+    height: 1080,
   },
 
-  // ===== SERVICE DETAIL PAGES =====
-  "service-1-hero": {
-    src: "/images/service-1-hero.jpg",
-    alt: "Service one hero image",
+  // ===== SERVICE: WATER HEATER =====
+  "service-water": {
+    src: "/images/water-heater-tank.jpg",
+    alt: "Residential water heater installation",
     width: 1920,
-    height: 600,
+    height: 1080,
+  },
+  "service-water-hero": {
+    src: "/images/water-heater-tank.jpg",
+    alt: "Full-service water heater installation and repair in Oklahoma City",
+    width: 1920,
+    height: 1080,
     focalPoint: { x: 0.5, y: 0.4 },
   },
-  "service-1-detail-1": {
-    src: "/images/service-1-detail-1.jpg",
-    alt: "Service one detailed work example",
-    width: 800,
-    height: 600,
-  },
-  "service-1-detail-2": {
-    src: "/images/service-1-detail-2.jpg",
-    alt: "Service one completed project",
-    width: 800,
-    height: 600,
-  },
-  "service-2-hero": {
-    src: "/images/service-2-hero.jpg",
-    alt: "Service two hero image",
+  "service-water-feature": {
+    src: "/images/water-heater-knob.jpg",
+    alt: "Technician adjusting water heater temperature controls",
     width: 1920,
-    height: 600,
-    focalPoint: { x: 0.5, y: 0.4 },
-  },
-  "service-2-detail-1": {
-    src: "/images/service-2-detail-1.jpg",
-    alt: "Service two detailed work example",
-    width: 800,
-    height: 600,
-  },
-  "service-2-detail-2": {
-    src: "/images/service-2-detail-2.jpg",
-    alt: "Service two completed project",
-    width: 800,
-    height: 600,
-  },
-  "service-3-hero": {
-    src: "/images/service-3-hero.jpg",
-    alt: "Service three hero image",
-    width: 1920,
-    height: 600,
-    focalPoint: { x: 0.5, y: 0.4 },
-  },
-  "service-3-detail-1": {
-    src: "/images/service-3-detail-1.jpg",
-    alt: "Service three detailed work example",
-    width: 800,
-    height: 600,
-  },
-  "service-3-detail-2": {
-    src: "/images/service-3-detail-2.jpg",
-    alt: "Service three completed project",
-    width: 800,
-    height: 600,
+    height: 1080,
   },
 
-  // ===== ABOUT PAGE =====
+  // ===== SERVICE: COMMERCIAL =====
+  "service-commercial": {
+    src: "/images/commercial-rooftop-techs.jpg",
+    alt: "Commercial HVAC technicians servicing a rooftop unit",
+    width: 1920,
+    height: 1080,
+  },
+  "service-commercial-hero": {
+    src: "/images/commercial-rooftop-chillers.jpg",
+    alt: "Commercial HVAC services in Oklahoma City",
+    width: 1920,
+    height: 1080,
+    focalPoint: { x: 0.5, y: 0.5 },
+  },
+  "service-commercial-feature": {
+    src: "/images/tech-blue-helmet-2.jpg",
+    alt: "Commercial HVAC technician on a rooftop install",
+    width: 1920,
+    height: 1080,
+  },
+
+  // ===== SERVICE: VENTILATION / DUCT =====
+  "service-vent": {
+    src: "/images/industrial-ductwork.jpg",
+    alt: "Industrial ductwork installation by Advantage Heating & Air",
+    width: 1920,
+    height: 1080,
+  },
+  "service-vent-hero": {
+    src: "/images/industrial-ductwork.jpg",
+    alt: "Ventilation, air duct, and ductless mini-split services in Oklahoma City",
+    width: 1920,
+    height: 1080,
+    focalPoint: { x: 0.5, y: 0.5 },
+  },
+  "service-vent-feature": {
+    src: "/images/duct-filter-inspection.jpg",
+    alt: "Technician inspecting a duct filter during a maintenance visit",
+    width: 1920,
+    height: 1080,
+  },
+  "service-vent-mini-split": {
+    src: "/images/mini-split-remote.jpg",
+    alt: "Ductless mini-split being controlled by remote",
+    width: 1920,
+    height: 1080,
+  },
+
+  // ===== ABOUT =====
   "about-hero": {
-    src: "/images/about-hero.jpg",
-    alt: "Our team at work",
+    src: "/images/tech-thumbs-up.jpg",
+    alt: "About Advantage Heating & Air Conditioning",
     width: 1920,
-    height: 600,
-    focalPoint: { x: 0.5, y: 0.4 },
+    height: 1080,
+    focalPoint: { x: 0.6, y: 0.4 },
   },
   "about-story": {
-    src: "/images/about-story.jpg",
-    alt: "Company founder leading a project on site",
-    width: 800,
-    height: 1000,
-    focalPoint: { x: 0.5, y: 0.3 },
+    src: "/images/condenser-row.jpg",
+    alt: "Row of residential AC units installed by Advantage Heating & Air",
+    width: 1920,
+    height: 1080,
   },
   "about-team": {
-    src: "/images/about-team.jpg",
-    alt: "Our experienced team",
-    width: 800,
-    height: 600,
+    src: "/images/commercial-rooftop-chillers.jpg",
+    alt: "Advantage technicians on a commercial rooftop service call",
+    width: 1920,
+    height: 1080,
   },
 
-  // ===== CONTACT PAGE =====
+  // ===== CONTACT =====
   "contact-hero": {
-    src: "/images/contact-hero.jpg",
-    alt: "Get in touch with our team",
+    src: "/images/tech-blue-helmet.jpg",
+    alt: "Contact Advantage Heating & Air Conditioning in Oklahoma City",
     width: 1920,
-    height: 600,
+    height: 1080,
     focalPoint: { x: 0.5, y: 0.4 },
   },
 
-  // ===== TESTIMONIALS =====
-  "testimonial-1": {
-    src: "/images/testimonial-1.jpg",
-    alt: "Client portrait",
-    width: 200,
-    height: 200,
+  // ===== GALLERY =====
+  "gallery-hero": {
+    src: "/images/condenser-row.jpg",
+    alt: "Advantage Heating & Air Conditioning project gallery",
+    width: 1920,
+    height: 1080,
   },
-  "testimonial-2": {
-    src: "/images/testimonial-2.jpg",
-    alt: "Client portrait",
-    width: 200,
-    height: 200,
+
+  // ===== BLOG =====
+  "blog-hero": {
+    src: "/images/hvac-component-closeup.jpg",
+    alt: "Advantage Heating & Air Conditioning HVAC tips and resources",
+    width: 1920,
+    height: 1080,
+    focalPoint: { x: 0.5, y: 0.4 },
   },
-  "testimonial-3": {
-    src: "/images/testimonial-3.jpg",
-    alt: "Client portrait",
-    width: 200,
-    height: 200,
+
+  // ===== AREA PAGE HERO (shared) =====
+  "area-hero": {
+    src: "/images/tech-blue-helmet.jpg",
+    alt: "HVAC service in the Oklahoma City metro",
+    width: 1920,
+    height: 1080,
+    focalPoint: { x: 0.5, y: 0.4 },
+  },
+  "area-feature": {
+    src: "/images/outdoor-ac-staged.jpg",
+    alt: "Outdoor AC unit installed in an Oklahoma neighborhood",
+    width: 1920,
+    height: 1080,
+  },
+
+  // ===== UTILITY IMAGES (used by individual blog posts / gallery) =====
+  "img-mini-split-clean": {
+    src: "/images/mini-split-cleaning.jpg",
+    alt: "Maintenance cleaning of a ductless mini-split",
+    width: 1920,
+    height: 1080,
+  },
+  "img-condenser-closeup": {
+    src: "/images/condenser-closeup.jpg",
+    alt: "Closeup of a residential AC condenser",
+    width: 1920,
+    height: 1080,
+  },
+  "img-window-ac": {
+    src: "/images/window-ac-unit.jpg",
+    alt: "Modern window AC unit",
+    width: 1920,
+    height: 1080,
+  },
+  "img-air-duct-vent": {
+    src: "/images/air-duct-vent.jpg",
+    alt: "Galvanized air duct vent in a commercial building",
+    width: 1920,
+    height: 1080,
+  },
+  "img-water-heater-knob": {
+    src: "/images/water-heater-knob.jpg",
+    alt: "Adjusting a water heater temperature dial",
+    width: 1920,
+    height: 1080,
   },
 
   // ===== BRANDING =====
   logo: {
-    src: "/images/logo.svg",
-    alt: "Company logo",
-    width: 180,
-    height: 48,
+    src: "/logo.png",
+    alt: "Advantage Heating & Air Conditioning logo",
+    width: 600,
+    height: 200,
   },
   "logo-white": {
-    src: "/images/logo-white.svg",
-    alt: "Company logo",
-    width: 180,
-    height: 48,
+    src: "/logo.png",
+    alt: "Advantage Heating & Air Conditioning logo",
+    width: 600,
+    height: 200,
+  },
+  penguin: {
+    src: "/penguin.png",
+    alt: "Advantage Heating & Air Conditioning penguin mascot",
+    width: 350,
+    height: 350,
   },
 };

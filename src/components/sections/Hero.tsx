@@ -10,7 +10,7 @@ export function Hero() {
   const { hero } = homepageContent;
 
   return (
-    <section className="relative flex min-h-screen items-center">
+    <section className="relative -mt-20 flex min-h-screen items-center pt-20">
       {/* Background Image */}
       <ImageSlot
         imageKey="hero-home"
@@ -23,8 +23,8 @@ export function Hero() {
 
       {/* Content */}
       <Container className="relative z-10 py-32 text-center">
-        <span className="mb-4 inline-block rounded-full bg-white/10 px-5 py-2 text-xs font-semibold uppercase tracking-widest text-white backdrop-blur-sm">
-          Trusted Local Service Provider
+        <span className="mb-4 inline-block rounded-full bg-accent-500 px-5 py-2 text-xs font-semibold uppercase tracking-widest text-white shadow-lg">
+          24/7 Emergency Service · Family-Owned · 25+ Years
         </span>
 
         <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">

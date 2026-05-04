@@ -3,30 +3,30 @@ import type { ProcessStep } from "@/types";
 export const processSteps: ProcessStep[] = [
   {
     step: 1,
-    title: "Consultation",
+    title: "Call or Request a Quote",
     description:
-      "We start with a thorough discussion of your project goals, budget, and timeline. This is where we listen, assess, and begin building your custom plan.",
-    icon: "MessageSquare",
+      "Reach out by phone or our online form, day or night. We answer 24/7 and book most appointments same-day.",
+    icon: "PhoneCall",
   },
   {
     step: 2,
-    title: "Planning & Estimate",
+    title: "Free On-Site Estimate",
     description:
-      "You receive a detailed proposal with transparent line-item pricing, a clear project timeline, and a comprehensive scope of work — no surprises.",
-    icon: "FileText",
+      "A NATE-certified technician inspects your system, diagnoses the issue, and gives you a clear, written estimate with no pressure.",
+    icon: "ClipboardList",
   },
   {
     step: 3,
-    title: "Execution",
+    title: "We Get to Work",
     description:
-      "Our team gets to work with daily coordination, quality checkpoints, and regular progress updates. We treat your project like our own.",
-    icon: "Hammer",
+      "Once you approve, we get your repair, install, or replacement done fast — using premium parts and the right tools for the job.",
+    icon: "Wrench",
   },
   {
     step: 4,
-    title: "Final Walkthrough",
+    title: "Comfort Restored",
     description:
-      "We don't consider a project done until you're completely satisfied. A thorough final inspection ensures every detail meets our exacting standards.",
+      "We test the system, walk you through what we did, and stand behind the work with a written warranty. Done right the first time.",
     icon: "CheckCircle",
   },
 ];

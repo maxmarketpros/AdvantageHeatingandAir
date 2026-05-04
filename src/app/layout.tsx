@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { ContactSection } from "@/components/sections/ContactSection";
 import { siteConfig } from "@/config/site";
 import { generateLocalBusinessSchema } from "@/lib/structured-data";
 import "./globals.css";
@@ -24,10 +25,6 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [{ url: siteConfig.ogImage }],
   },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
 };
 
 export default function RootLayout({
@@ -40,6 +37,7 @@ export default function RootLayout({
       <body className="flex min-h-full flex-col">
         <Header />
         <main className="flex-1">{children}</main>
+        <ContactSection />
         <Footer />
         <script
           type="application/ld+json"

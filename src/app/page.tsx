@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
+import { businessConfig } from "@/config/business";
 import { Hero } from "@/components/sections/Hero";
 import { InfoBar } from "@/components/layout/InfoBar";
 import { SplitSection } from "@/components/sections/SplitSection";
@@ -9,7 +10,6 @@ import { TestimonialSection } from "@/components/sections/TestimonialSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { ServiceAreasSection } from "@/components/sections/ServiceAreasSection";
-import { QuoteSection } from "@/components/sections/QuoteSection";
 import { ChecklistGrid } from "@/components/sections/ChecklistGrid";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
@@ -36,13 +36,15 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const content = homepageContent;
+  const phoneCta = {
+    label: `Call ${businessConfig.phone}`,
+    href: `tel:${businessConfig.phoneRaw}`,
+  };
 
   return (
     <>
-      {/* Hero */}
       <Hero />
 
-      {/* Info Bar */}
       <InfoBar />
 
       {/* About Preview */}
@@ -70,20 +72,19 @@ export default function HomePage() {
           ))}
         </div>
         <div className="flex flex-wrap gap-4">
-          <Button
-            href="/contact"
-            icon={<ArrowRight className="h-5 w-5" />}
-          >
-            Get a Quote
+          <Button href="/contact" icon={<ArrowRight className="h-5 w-5" />}>
+            Get a Free Estimate
           </Button>
-          <Button href="/about" variant="outline">
+          <Button href="/about-us" variant="outline">
             Learn More
           </Button>
         </div>
       </SplitSection>
 
       {/* Services */}
-      <ServiceGrid />
+      <div id="services">
+        <ServiceGrid />
+      </div>
 
       {/* Standards */}
       <SplitSection
@@ -98,7 +99,10 @@ export default function HomePage() {
           heading={content.standards.heading}
         />
         {content.standards.paragraphs.map((p, i) => (
-          <p key={i} className="mb-4 text-base leading-relaxed text-muted md:text-lg">
+          <p
+            key={i}
+            className="mb-4 text-base leading-relaxed text-muted md:text-lg"
+          >
             {p}
           </p>
         ))}
@@ -115,8 +119,8 @@ export default function HomePage() {
         heading={content.process.heading}
         subtitle={content.process.subtitle}
         bgColor="white"
-        primaryCta={{ label: "Get a Quote", href: "/contact" }}
-        secondaryCta={{ label: "Call (555) 123-4567", href: "tel:+15551234567" }}
+        primaryCta={{ label: "Get a Free Estimate", href: "/contact" }}
+        secondaryCta={phoneCta}
       />
 
       {/* Testimonials */}
@@ -128,7 +132,9 @@ export default function HomePage() {
       />
 
       {/* Service Areas */}
-      <ServiceAreasSection />
+      <div id="service-areas">
+        <ServiceAreasSection />
+      </div>
 
       {/* FAQ */}
       <FAQSection
@@ -144,11 +150,8 @@ export default function HomePage() {
         heading={content.cta.heading}
         text={content.cta.text}
         primaryCta={content.cta.primaryCta}
-        secondaryCta={content.cta.secondaryCta}
+        secondaryCta={phoneCta}
       />
-
-      {/* Quote Form */}
-      <QuoteSection />
     </>
   );
 }
