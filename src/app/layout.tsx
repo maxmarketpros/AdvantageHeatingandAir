@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -113,6 +114,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateLocalBusinessSchema()),
           }}
+        />
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="69f8fd8d397a1dab391d013b"
+          strategy="lazyOnload"
         />
       </body>
     </html>
