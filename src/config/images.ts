@@ -21,11 +21,11 @@ export const imageManifest: Record<string, ImageSlotConfig> = {
     focalPoint: { x: 0.5, y: 0.5 },
   },
   "standards-feature": {
-    src: "/images/tech-thumbs-up.jpg",
-    alt: "Advantage HVAC technician giving a thumbs up after completing a service call",
-    width: 1920,
-    height: 1080,
-    focalPoint: { x: 0.6, y: 0.4 },
+    src: "/images/team-1987.jpg",
+    alt: "The full Advantage Heating & Air Conditioning team standing in front of their service van fleet — local and family-owned since 1987.",
+    width: 880,
+    height: 800,
+    focalPoint: { x: 0.5, y: 0.5 },
   },
 
   // ===== SERVICE: AC INSTALLATION =====
@@ -190,10 +190,11 @@ export const imageManifest: Record<string, ImageSlotConfig> = {
     focalPoint: { x: 0.6, y: 0.4 },
   },
   "about-story": {
-    src: "/images/condenser-row.jpg",
-    alt: "Row of residential AC units installed by Advantage Heating & Air",
-    width: 1920,
-    height: 1080,
+    src: "/images/team-1987.jpg",
+    alt: "The Advantage Heating & Air Conditioning crew gathered in front of the company service vans — local Oklahoma City team since 1987.",
+    width: 880,
+    height: 800,
+    focalPoint: { x: 0.5, y: 0.5 },
   },
   "about-team": {
     src: "/images/commercial-rooftop-chillers.jpg",
