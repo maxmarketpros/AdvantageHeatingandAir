@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { ContactSection } from "@/components/sections/ContactSection";
+import { GlobalContactSection } from "@/components/sections/GlobalContactSection";
 import { siteConfig } from "@/config/site";
 import { generateLocalBusinessSchema } from "@/lib/structured-data";
 import "./globals.css";
@@ -106,7 +106,7 @@ export default function RootLayout({
       <body className="flex min-h-full flex-col">
         <Header />
         <main className="flex-1">{children}</main>
-        <ContactSection />
+        <GlobalContactSection />
         <Footer />
         <script
           type="application/ld+json"

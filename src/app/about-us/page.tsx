@@ -37,7 +37,7 @@ export default function AboutPage() {
           { label: "Home", href: "/" },
           { label: "About Us" },
         ]}
-        primaryCta={{ label: "Get a Free Estimate", href: "/contact" }}
+        primaryCta={{ label: "Get a Free Estimate", href: "#contact" }}
         secondaryCta={phoneCta}
       />
 
@@ -95,7 +95,7 @@ export default function AboutPage() {
         ))}
         <div className="mt-6 flex flex-wrap gap-4">
           <Button
-            href="/contact"
+            href="#contact"
             icon={<ArrowRight className="h-5 w-5" />}
           >
             Get a Free Estimate
@@ -111,7 +111,7 @@ export default function AboutPage() {
       <CTASection
         heading="Ready for Reliable HVAC Service?"
         text="Same-day appointments across the OKC metro. 24/7 emergency dispatch. Honest pricing every time."
-        primaryCta={{ label: "Get a Free Estimate", href: "/contact" }}
+        primaryCta={{ label: "Get a Free Estimate", href: "#contact" }}
         secondaryCta={phoneCta}
       />
     </>

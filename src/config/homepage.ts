@@ -3,7 +3,7 @@ export const homepageContent = {
     heading: "Your Trusted HVAC Experts in Oklahoma City",
     subtitle:
       "Family-owned, NATE-certified, and on call 24/7 across the OKC metro. Same-day service, honest pricing, and a best-price guarantee on every job.",
-    primaryCta: { label: "Get a Free Estimate", href: "/contact" },
+    primaryCta: { label: "Get a Free Estimate", href: "#contact" },
     secondaryCta: { label: "Call (405) 549-1652", href: "tel:+14055491652" },
   },
   aboutPreview: {
@@ -78,7 +78,7 @@ export const homepageContent = {
   cta: {
     heading: "Comfort Trouble? We'll Be There.",
     text: "Whether it's a routine tune-up, an emergency repair, or a full system replacement — Advantage is one call away, 24 hours a day.",
-    primaryCta: { label: "Get a Free Estimate", href: "/contact" },
+    primaryCta: { label: "Get a Free Estimate", href: "#contact" },
     secondaryCta: { label: "Call (405) 549-1652", href: "tel:+14055491652" },
   },
 } as const;

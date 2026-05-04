@@ -34,7 +34,7 @@ export default function BlogIndexPage() {
         subtitle="Honest, practical advice from a 25+ year Oklahoma City HVAC contractor — no fluff, no upsell."
         imageKey="blog-hero"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Blog" }]}
-        primaryCta={{ label: "Get a Free Estimate", href: "/contact" }}
+        primaryCta={{ label: "Get a Free Estimate", href: "#contact" }}
         secondaryCta={phoneCta}
       />
 

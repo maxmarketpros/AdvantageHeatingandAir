@@ -49,7 +49,7 @@ export default function GalleryPage() {
         subtitle="Real HVAC work across Oklahoma City — installs, repairs, and commercial service from our crew."
         imageKey="gallery-hero"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Gallery" }]}
-        primaryCta={{ label: "Get a Free Estimate", href: "/contact" }}
+        primaryCta={{ label: "Get a Free Estimate", href: "#contact" }}
         secondaryCta={phoneCta}
       />
 

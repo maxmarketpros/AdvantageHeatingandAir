@@ -22,7 +22,7 @@ interface ServicePageBodyProps {
 
 export function ServicePageBody({ service }: ServicePageBodyProps) {
   const ctaProps = {
-    primary: { label: "Get a Free Estimate", href: "/contact" },
+    primary: { label: "Get a Free Estimate", href: "#contact" },
     secondary: {
       label: `Call ${businessConfig.phone}`,
       href: `tel:${businessConfig.phoneRaw}`,
@@ -86,7 +86,7 @@ export function ServicePageBody({ service }: ServicePageBodyProps) {
           </p>
         ))}
         <div className="mt-6 flex flex-wrap gap-4">
-          <Button href="/contact" icon={<ArrowRight className="h-5 w-5" />}>
+          <Button href="#contact" icon={<ArrowRight className="h-5 w-5" />}>
             Get a Free Estimate
           </Button>
           <Button

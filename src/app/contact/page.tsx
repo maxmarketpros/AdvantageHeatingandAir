@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/PageHero";
+import { ContactSection } from "@/components/sections/ContactSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { Container } from "@/components/ui/Container";
 import { MapEmbed } from "@/components/ui/MapEmbed";
@@ -60,6 +61,8 @@ export default function ContactPage() {
         ]}
         primaryCta={phoneCta}
       />
+
+      <ContactSection variant="full" />
 
       <section className="section-padding">
         <Container>

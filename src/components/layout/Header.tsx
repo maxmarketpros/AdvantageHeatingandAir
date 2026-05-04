@@ -98,7 +98,7 @@ function MobileMenu({
           {businessConfig.phone}
         </a>
 
-        <Button href="/contact" className="mt-2 w-full" onClick={onClose}>
+        <Button href="#contact" className="mt-2 w-full" onClick={onClose}>
           Get a Free Estimate
         </Button>
       </div>
@@ -204,7 +204,7 @@ export function Header() {
                 <Phone className="h-4 w-4" />
                 {businessConfig.phone}
               </a>
-              <Button href="/contact" size="sm">
+              <Button href="#contact" size="sm">
                 Get a Free Estimate
               </Button>
             </div>

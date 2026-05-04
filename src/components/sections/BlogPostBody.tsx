@@ -115,7 +115,7 @@ export function BlogPostBody({ post }: BlogPostBodyProps) {
                 Same-day service, 24/7 emergency dispatch, and honest written quotes — that's how Advantage runs.
               </p>
               <div className="mt-5 flex flex-wrap gap-3">
-                <Button href="/contact" icon={<ArrowRight className="h-5 w-5" />}>
+                <Button href="#contact" icon={<ArrowRight className="h-5 w-5" />}>
                   Get a Free Estimate
                 </Button>
                 <Button
@@ -163,7 +163,7 @@ export function BlogPostBody({ post }: BlogPostBodyProps) {
       <CTASection
         heading="Comfort Trouble? We'll Be There."
         text="24/7 emergency service across the OKC metro. Call now or request a free estimate online."
-        primaryCta={{ label: "Get a Free Estimate", href: "/contact" }}
+        primaryCta={{ label: "Get a Free Estimate", href: "#contact" }}
         secondaryCta={{
           label: `Call ${businessConfig.phone}`,
           href: `tel:${businessConfig.phoneRaw}`,

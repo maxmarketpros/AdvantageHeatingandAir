@@ -76,7 +76,7 @@ export default function HomePage() {
           ))}
         </div>
         <div className="flex flex-wrap gap-4">
-          <Button href="/contact" icon={<ArrowRight className="h-5 w-5" />}>
+          <Button href="#contact" icon={<ArrowRight className="h-5 w-5" />}>
             Get a Free Estimate
           </Button>
           <Button href="/about-us" variant="outline">
@@ -127,7 +127,7 @@ export default function HomePage() {
         heading={content.process.heading}
         subtitle={content.process.subtitle}
         bgColor="white"
-        primaryCta={{ label: "Get a Free Estimate", href: "/contact" }}
+        primaryCta={{ label: "Get a Free Estimate", href: "#contact" }}
         secondaryCta={phoneCta}
       />
 
