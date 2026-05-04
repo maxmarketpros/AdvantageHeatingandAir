@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, MapPinned } from "lucide-react";
+import { OptimizedImage } from "@/components/ui/OptimizedImage";
 
 function FacebookIcon({ className }: { className?: string }) {
   return (
@@ -37,11 +37,12 @@ export function Footer() {
                 />
                 {/* Subtle ring */}
                 <div className="relative flex items-center justify-center rounded-2xl bg-white p-4 shadow-lg ring-1 ring-white/20 transition-transform duration-500 group-hover:scale-105">
-                  <Image
+                  <OptimizedImage
                     src="/penguin.png"
                     alt="Advantage Heating & Air mascot"
-                    width={320}
-                    height={320}
+                    width={350}
+                    height={350}
+                    sizes="(max-width: 640px) 128px, 160px"
                     className="h-32 w-32 object-contain sm:h-40 sm:w-40"
                   />
                 </div>

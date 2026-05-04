@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
-import Image from "next/image";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
+import { OptimizedImage } from "@/components/ui/OptimizedImage";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { businessConfig } from "@/config/business";
@@ -138,12 +138,13 @@ export function Header() {
           <nav className="flex h-20 items-center justify-between gap-4">
             {/* Logo */}
             <Link href="/" className="flex items-center" aria-label="Advantage Heating & Air Conditioning home">
-              <Image
+              <OptimizedImage
                 src="/logo.png"
                 alt="Advantage Heating & Air Conditioning"
                 width={420}
                 height={140}
                 priority
+                sizes="(max-width: 768px) 220px, 420px"
                 className="h-[67px] w-auto md:h-[78px]"
               />
             </Link>

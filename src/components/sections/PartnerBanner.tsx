@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 
@@ -13,12 +12,13 @@ export function PartnerBanner() {
           <div className="grid items-center gap-8 px-6 py-8 md:grid-cols-[auto_1fr] md:gap-12 md:px-12 md:py-10">
             {/* Logo */}
             <div className="flex shrink-0 items-center justify-center md:justify-start">
-              <Image
+              <img
                 src="/amana-logo.jpg"
                 alt="Amana Heating & Air Conditioning logo"
                 width={500}
                 height={185}
-                priority={false}
+                loading="lazy"
+                decoding="async"
                 className="h-16 w-auto md:h-20 lg:h-24"
               />
             </div>

@@ -1,10 +1,7 @@
-"use client";
-
-import Image from "next/image";
 import { imageManifest } from "@/config/images";
 import { cn } from "@/lib/utils";
+import { buildSrcsets } from "@/lib/imageSrcset";
 import { ImageIcon } from "lucide-react";
-import { useState } from "react";
 
 interface ImageSlotProps {
   imageKey: string;
@@ -29,8 +26,10 @@ function Placeholder({
   overlayClassName?: string;
   aspectRatio?: string;
 }) {
-  // Determine if this is a dark-overlay context (hero, page banner)
-  const isDarkContext = overlayClassName?.includes("bg-black") || overlayClassName?.includes("bg-gradient") || overlayClassName?.includes("foreground");
+  const isDarkContext =
+    overlayClassName?.includes("bg-black") ||
+    overlayClassName?.includes("bg-gradient") ||
+    overlayClassName?.includes("foreground");
 
   if (fill) {
     return (
@@ -42,10 +41,7 @@ function Placeholder({
           )}
         >
           <ImageIcon
-            className={cn(
-              "h-12 w-12",
-              isDarkContext ? "text-white/20" : "text-muted-light"
-            )}
+            className={cn("h-12 w-12", isDarkContext ? "text-white/20" : "text-muted-light")}
             strokeWidth={1.5}
           />
           <span
@@ -57,9 +53,7 @@ function Placeholder({
             {imageKey}
           </span>
         </div>
-        {overlayClassName && (
-          <div className={cn("absolute inset-0", overlayClassName)} />
-        )}
+        {overlayClassName && <div className={cn("absolute inset-0", overlayClassName)} />}
       </div>
     );
   }
@@ -73,9 +67,7 @@ function Placeholder({
       style={{ aspectRatio: aspectRatio || "4/3" }}
     >
       <ImageIcon className="h-10 w-10 text-muted-light" strokeWidth={1.5} />
-      <span className="text-xs font-medium uppercase tracking-wider text-muted-light">
-        {imageKey}
-      </span>
+      <span className="text-xs font-medium uppercase tracking-wider text-muted-light">{imageKey}</span>
     </div>
   );
 }
@@ -90,13 +82,8 @@ export function ImageSlot({
   overlayClassName,
 }: ImageSlotProps) {
   const config = imageManifest[imageKey];
-  const [hasError, setHasError] = useState(false);
 
-  const focalX = config?.focalPoint?.x ?? 0.5;
-  const focalY = config?.focalPoint?.y ?? 0.5;
-  const objectPosition = `${focalX * 100}% ${focalY * 100}%`;
-
-  if (!config || hasError) {
+  if (!config) {
     return (
       <Placeholder
         imageKey={imageKey}
@@ -108,22 +95,42 @@ export function ImageSlot({
     );
   }
 
+  const focalX = config.focalPoint?.x ?? 0.5;
+  const focalY = config.focalPoint?.y ?? 0.5;
+  const objectPosition = `${focalX * 100}% ${focalY * 100}%`;
+
+  const srcsets = buildSrcsets(config.src);
+  const fallbackSrc = srcsets?.fallbackSrc ?? config.src;
+
+  const imgEl = (
+    <img
+      src={fallbackSrc}
+      srcSet={srcsets?.fallback}
+      sizes={sizes}
+      alt={config.alt}
+      width={config.width}
+      height={config.height}
+      loading={priority ? "eager" : "lazy"}
+      decoding={priority ? "sync" : "async"}
+      fetchPriority={priority ? "high" : "auto"}
+      className={fill ? "absolute inset-0 h-full w-full object-cover" : "h-full w-full object-cover"}
+      style={{ objectPosition }}
+    />
+  );
+
+  const picture = (
+    <picture>
+      {srcsets && <source type="image/avif" srcSet={srcsets.avif} sizes={sizes} />}
+      {srcsets && <source type={srcsets.fallbackType === "image/png" ? "image/webp" : "image/webp"} srcSet={srcsets.webp} sizes={sizes} />}
+      {imgEl}
+    </picture>
+  );
+
   if (fill) {
     return (
       <div className={cn("relative overflow-hidden", className)}>
-        <Image
-          src={config.src}
-          alt={config.alt}
-          fill
-          priority={priority}
-          sizes={sizes}
-          className="object-cover"
-          style={{ objectPosition }}
-          onError={() => setHasError(true)}
-        />
-        {overlayClassName && (
-          <div className={cn("absolute inset-0", overlayClassName)} />
-        )}
+        {picture}
+        {overlayClassName && <div className={cn("absolute inset-0", overlayClassName)} />}
       </div>
     );
   }
@@ -133,19 +140,8 @@ export function ImageSlot({
       className={cn("relative overflow-hidden rounded-xl", className)}
       style={aspectRatio ? { aspectRatio } : undefined}
     >
-      <Image
-        src={config.src}
-        alt={config.alt}
-        fill
-        priority={priority}
-        sizes={sizes}
-        className="object-cover"
-        style={{ objectPosition }}
-        onError={() => setHasError(true)}
-      />
-      {overlayClassName && (
-        <div className={cn("absolute inset-0", overlayClassName)} />
-      )}
+      {picture}
+      {overlayClassName && <div className={cn("absolute inset-0", overlayClassName)} />}
     </div>
   );
 }

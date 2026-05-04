@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { PageHero } from "@/components/sections/PageHero";
 import { Container } from "@/components/ui/Container";
+import { OptimizedImage } from "@/components/ui/OptimizedImage";
 import { businessConfig } from "@/config/business";
 import { generatePageMetadata } from "@/lib/metadata";
 
@@ -61,7 +61,7 @@ export default function GalleryPage() {
                 key={i}
                 className="group relative overflow-hidden rounded-2xl bg-surface-dark shadow-card transition-all hover:shadow-card-hover"
               >
-                <Image
+                <OptimizedImage
                   src={img.src}
                   alt={img.alt}
                   width={1920}

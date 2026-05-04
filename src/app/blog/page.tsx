@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { Container } from "@/components/ui/Container";
+import { OptimizedImage } from "@/components/ui/OptimizedImage";
 import { businessConfig } from "@/config/business";
 import { blogPosts } from "@/config/blog";
 import { imageManifest } from "@/config/images";
@@ -46,12 +46,13 @@ export default function BlogIndexPage() {
             className="group mb-12 grid overflow-hidden rounded-2xl bg-white shadow-card transition-all hover:-translate-y-0.5 hover:shadow-card-hover lg:grid-cols-2"
           >
             <div className="relative aspect-[16/10] overflow-hidden lg:aspect-auto">
-              <Image
+              <OptimizedImage
                 src={featuredImg?.src || "/images/hvac-component-closeup.jpg"}
                 alt={featuredImg?.alt || featured.title}
-                fill
+                width={1920}
+                height={1080}
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
             <div className="flex flex-col justify-center p-8 md:p-12">
@@ -95,12 +96,13 @@ export default function BlogIndexPage() {
                   className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-card transition-all hover:-translate-y-1 hover:shadow-card-hover"
                 >
                   <div className="relative aspect-[16/10] overflow-hidden">
-                    <Image
+                    <OptimizedImage
                       src={img?.src || "/images/hvac-component-closeup.jpg"}
                       alt={img?.alt || post.title}
-                      fill
+                      width={1920}
+                      height={1080}
                       sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   <div className="flex flex-1 flex-col p-6">
